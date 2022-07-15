@@ -1,0 +1,23 @@
+.section::after, .section::before {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.section {height: 100vh;background-position: center;background-size: cover;}
+.section2 {height: 80vh;background-position: center;background-size: cover;}
+.section3 {height: 50vh;background-position: center;background-size: cover;}
+
+.anime-1 {opacity: 0;transform: translate3d(0,100px,0);transition: .3s;}/*de abajo hacia arriba*/
+.anime-1a {opacity: 0;transform: translate3d(0,100px,0);transition: .9s;}/*de abajo hacia arriba*/
+.anime-2 {opacity: 0;transform: translate3d(0,-100px,0);transition: .3s;}/*de arriba hacia abajo*/
+.anime-2a {opacity: 0;transform: translate3d(0,-100px,0);transition: .6s;}/*de arriba hacia abajo*/
+.anime-2b {opacity: 0;transform: translate3d(0,-100px,0);transition: 1.1s;}/*de arriba hacia abajo*/
+.anime-3 {opacity: 0;transform: translate3d(-100px,0,0);transition: .3s;}/*de izquierda a derecha*/
+.anime-3a {opacity: 0;transform: translate3d(-100px,0,0);transition: .5s;}/*de izquierda a derecha*/
+.anime-3b {opacity: 0;transform: translate3d(-100px,0,0);transition: .9s;}/*de izquierda a derecha*/
+.anime-4 {opacity: 0;transform: translate3d(100px,0,0);transition: .8s;}/*de derecha a izquierda*/
+.anime-4a {opacity: 0;transform: translate3d(100px,0,0);transition: 1s;}/*de derecha a izquierda*/
+.anime-4b {opacity: 0;transform: translate3d(100px,0,0);transition: 1.2s;}/*de derecha a izquierda*/
+
+.anime-start {opacity: 1;transform: translate3d(0,0,0);}

@@ -1,0 +1,17 @@
+#cronometro { 
+    padding: 1.5em 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    border-radius: 1em;
+}
+
+#reloj { 
+    padding: .5em 0;
+    width: 100%;
+    font-size: 2em;/*cambiar tamaño de la letra en el reloj*/
+    text-align: center;
+    background-color: #fff;
+}
+
+#cronometro [type=button]  {font-size: 1em;margin-top: 1em;} /*cambiar tamaño de la letra en los botones*/

@@ -1,0 +1,80 @@
+.bg-cover{
+    display: inline-block;
+    background-size: cover;/* sirve para que la imagen ocupe el ancho del contenedor */
+}
+
+.img-profile{
+    box-shadow: 0px 0px 0px .5em white;
+    /*border-radius: 1em; un detallito que me parecio cool pero luego lo cambie, lo dejo comentado por si deseas utilizarlo */
+    width: 10em;/* aqui estan el alto y el ancho de la imagen */
+    height: 10em; /* deben ser iguales con el objetivo de que sea un cuadrado la foto de perfil */
+    background-position: center top;/* determina la posicion de la imagen */
+}
+
+.img-profile-flag{
+    /*border-radius: 1em; un detallito que me parecio cool pero luego lo cambie, lo dejo comentado por si deseas utilizarlo */
+    width: 2.5em;/* aqui estan el alto y el ancho de la imagen */
+    height: 2.5em; /* deben ser iguales con el objetivo de que sea un cuadrado la foto de perfil */
+    background-position: center center;/* determina la posicion de la imagen */
+    top: 2.5em;
+    left: 7em;
+    position: absolute;
+}
+
+
+.img-profile-flag-m{
+    /*border-radius: 1em; un detallito que me parecio cool pero luego lo cambie, lo dejo comentado por si deseas utilizarlo */
+    width: 2.5em;/* aqui estan el alto y el ancho de la imagen */
+    height: 2.5em; /* deben ser iguales con el objetivo de que sea un cuadrado la foto de perfil */
+    background-position: center center;/* determina la posicion de la imagen */
+    top: 2.5em;
+    left: 13em;
+    position: absolute;
+}
+
+
+.img-entrada{
+    width: 100%;/* aqui estan el alto y el ancho de la imagen */
+    height: 10em; /* deben ser iguales con el objetivo de que sea un cuadrado la foto de perfil */
+    background-position: center center;/* determina la posicion de la imagen */
+    background-size: cover;
+}
+
+/*El siguiente codigo sirve para hacer el zoom a las imagenes*/
+.imageContainer {
+  width: 96%;
+  height: 96%;
+  max-width: 50em;
+  max-height: 50em;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.imageContainer > img {
+    width: 100vh;
+  display: block;
+  max-width:100%;
+  max-height:100%;
+  cursor: move;
+  touch-action: none;
+}
+
+#hud {
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  padding: 10px 20px;
+  color: #FFF;
+  font-family: sans-serif;
+  font-size: 1.2em;
+  pointer-events: none;
+}

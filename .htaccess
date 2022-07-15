@@ -1,0 +1,11 @@
+ErrorDocument 400 http://joyeriario.cf/pagina-no-encontrada/
+ErrorDocument 401 http://joyeriario.cf/pagina-no-encontrada/
+ErrorDocument 403 http://joyeriario.cf/pagina-no-encontrada/
+ErrorDocument 404 http://joyeriario.cf/pagina-no-encontrada/
+ErrorDocument 503 http://joyeriario.cf/pagina-no-encontrada/
+Options +FollowSymLinks
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^.*$ ./index.php
+Options All -Indexes
