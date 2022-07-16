@@ -15,8 +15,11 @@ include_once 'app/tienda/RepositorioComentario.inc.php';
 
 include_once 'app/admin/ControlSesionAdmin.inc.php';
 
-Conexion :: abrir_conexion();
-
+if (ControlSesionAdmin::sesion_iniciada()) {    
+    Conexion :: abrir_conexion();
+    $id = $_SESSION['id_admin'];
+    $admin = RepositorioAdmin :: obtener_admin_por_id(Conexion::obtener_conexion(), $id);
+}
 
 
 $titulo = $entrada -> obtener_titulo();
@@ -27,9 +30,6 @@ $imagenCompartida = RUTA_TIENDA_COVER.$entrada -> obtener_imagen();
 include_once 'seccion/cabecera-inicio.inc.php';
 ?>
 
-<script type="text/javascript">
-    const imageUrl = '<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen();?>';
-</script>
 
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=625b4e8e85d62e001964c39a&product=sop' async='async'></script>
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
@@ -57,12 +57,26 @@ include_once 'seccion/cabecera-cierre.inc.php';
     </div>
     <div class="row">
         <div class="col-12 col-md-6 bg-image" style="background-image: url(<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>) ;">
-            <div class="row">
-                <div class="d-none d-sm-block section"></div>                
-                <div class="d-block d-sm-none" style="height: 50vh;">
-                    <div class="imageContainer"></div>
+            <?php
+            if ($entrada -> obtener_url_externa() !== ""){
+            ?>
+            <a class="col modal-trigger textoColorMarca" href="#mostrarDetalle">
+                <img loading="lazy" itemprop="image" src="<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen(); ?>" class="imagen" alt="<?php echo $entrada -> obtener_titulo(); ?>" >
+            </a>
+            <?php
+            }else{
+                ?>
+            <a href="<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>">
+                <div class="row">
+                    <div class="d-none d-sm-block section"></div>                
+                    <div class="d-block d-sm-none" style="height: 50vh;">
+                        <div class="imageContainer"></div>
+                    </div>
                 </div>
-            </div>
+            </a>
+            <?php
+            }
+            ?>            
         </div>
         <div class="col-md-6 d-none d-sm-block" style="height: 100vh;position: absolute;right: 0;overflow-y: scroll;padding: 3em 4em; scroll-behavior: smooth;">
             <h1 class="textoBold mayusculas" style="letter-spacing: .01em"><?php echo $entrada -> obtener_titulo(); ?></h1>
@@ -118,7 +132,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <div class="col-10">
                 <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="-69nWccB" data-limit="5" data-color="000"></script>
                 <br><br>
-                <?php include_once 'seccion/tienda/entradas_al_azar.inc.php'; ?>                
+                <?php include_once 'seccion/tienda/entradas_al_azar.inc.php'; ?>  
+                <br><br>              
             </div>
         </div>
     </div>

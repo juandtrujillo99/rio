@@ -50,12 +50,12 @@ include_once 'seccion/doc-navbar.inc.php';
 		include_once 'seccion/inicio/portada.inc.php';	
 		?>	
 		<div class="row">
-			<div class="col-12 center-align" style="padding:1em 0 2.5em 0;">
-				<p class="textoSubtitulo" style="font-size: 1.5em;"><?php echo $descripcionAlterna;?></p>
+			<div class="col-12 center-align" style="padding:1em 0 1.5em 0;">
+				<p class="textoSubtitulo" style="font-size: 1.5em;line-height: 1.2em;"><?php echo $descripcionAlterna;?></p>
 			</div>
 			<div class="col-12 row">
-				<div class="col-1"></div>				
-				<div class="col-10 row">
+				<div class="col-md-1"></div>				
+				<div class="col-md-10 col-12 row">
 					<?php EscritorEntradasTienda::escribir_entradas(); ?>
 				</div>
 				<div class="col-1"></div>	

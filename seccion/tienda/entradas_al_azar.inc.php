@@ -13,7 +13,6 @@ include_once 'app/tienda/EscritorEntradas.inc.php';
 		            <div align="center">   
 		                <div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_COVER.$entrada_actual -> obtener_imagen(); ?>);"></div>
 		            </div>
-		            <span class="card-title textoBold filtroEntrada truncate"><?php echo EscritorEntradasTienda::resumir_titulo(nl2br($entrada_actual -> obtener_titulo())); ?></span>
 		        </div>          
             </div>
         </a>

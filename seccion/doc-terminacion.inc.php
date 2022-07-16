@@ -6,7 +6,6 @@
 	<script src="<?php echo RUTA_JS; ?>iniciar-funciones.js"></script>
 	<script src="<?php echo RUTA_JS; ?>jquery.inc.js"></script>
 	<script type="text/javascript" src="<?php echo RUTA_JS; ?>menu-animacion.js"></script>
-	<script type="text/javascript" src="<?php echo RUTA_JS; ?>imagen-zoom.js"></script>
 	<script src="<?php echo RUTA_JS; ?>jquery.min.js"></script>
 	<script src="<?php echo RUTA_JS; ?>headroom.min.js"></script>
   	<script src="<?php echo RUTA_JS; ?>menu.js"></script>

@@ -40,7 +40,7 @@ class EscritorEntradasTienda {
 					</div>
 				</div> 
 				<div class="card-content">
-					<p class="titulo"><?php echo EscritorEntradasTienda::resumir_titulo(nl2br($entrada -> obtener_titulo())); ?></p>
+					<p class="titulo textoBold mayusculas"><?php echo EscritorEntradasTienda::resumir_titulo(nl2br($entrada -> obtener_titulo())); ?></p>
 					<p class="textoParrafo1a">$<?php echo $entrada -> obtener_precio(); ?></p>
 				</div>         
 			</div>
@@ -62,7 +62,7 @@ class EscritorEntradasTienda {
 					</div>
 				</div> 
 				<div class="card-content">
-					<p class="titulo"><?php echo EscritorEntradasTienda::resumir_titulo(nl2br($entrada -> obtener_titulo())); ?></p>
+					<p class="titulo textoBold mayusculas"><?php echo EscritorEntradasTienda::resumir_titulo(nl2br($entrada -> obtener_titulo())); ?></p>
 					<p class="textoParrafo1a">$<?php echo $entrada -> obtener_precio(); ?></p>
 				</div>         
 			</div>
