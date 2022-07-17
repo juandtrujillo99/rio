@@ -30,7 +30,7 @@ $imagenCompartida = RUTA_TIENDA_COVER.$entrada -> obtener_imagen();
 include_once 'seccion/cabecera-inicio.inc.php';
 ?>
 
-
+<script type="text/javascript">const imageUrl = '<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen() ?>';</script>
 <script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=625b4e8e85d62e001964c39a&product=sop' async='async'></script>
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
@@ -62,6 +62,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
             ?>
             <a class="col modal-trigger textoColorMarca" href="#mostrarDetalle">
                 <img loading="lazy" itemprop="image" src="<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen(); ?>" class="imagen" alt="<?php echo $entrada -> obtener_titulo(); ?>" >
+                <div class="imageContainer"></div>
             </a>
             <?php
             }else{
@@ -78,6 +79,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
             }
             ?>            
         </div>
+
+        <?php // informacion para pc  ?> 
         <div class="col-md-6 d-none d-sm-block" style="height: 100vh;position: absolute;right: 0;overflow-y: scroll;padding: 3em 4em; scroll-behavior: smooth;">
             <h1 class="textoBold mayusculas" style="letter-spacing: .01em"><?php echo $entrada -> obtener_titulo(); ?></h1>
             <?php 
@@ -103,6 +106,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <br><br>
             <div class="sharethis-inline-share-buttons"></div>
         </div>
+
+        <?php // informacion para moviles  ?>  
         <div class="col-12 d-block d-sm-none" style="padding: 3em;">
             <h1 class="textoBold mayusculas" style="letter-spacing: .01em"><?php echo $entrada -> obtener_titulo(); ?></h1>
             <?php 
@@ -126,6 +131,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <p><?php echo nl2br($entrada -> obtener_texto()); ?></p>      
             <br><br>
             <div class="sharethis-inline-share-buttons"></div>
+
+
         </div>
         <div class="col-12 row" style="background-color: #0d0d0d; color: white;">
             <div class="col-1"></div>
