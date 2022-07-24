@@ -206,3 +206,9 @@ background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMa
 .footer a i{color: <?php echo $colorMarca2;?>;padding: 0 .5em;}
 .footer .sec2{box-shadow: 0px .1px 5px 0px rgba(0,0,0,0.1);padding:1em 0;}
 .footer .sec2 a:hover{text-decoration: underline;}
+
+
+.barra-sup .pc{background-color: black;color: white;padding: .5em 1em;font-size: 1.5em;}
+.barra-sup .pc a{color: white;}
+.barra-sup .movil{position: absolute;z-index: 9999;font-size: 1.5em;padding: 1.5em 1em;width: 100%;}
+.barra-sup .movil a{background-color: rgba(255, 255, 255, 1);padding: .5em 1em;border-radius: 50%}

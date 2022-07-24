@@ -49,12 +49,25 @@ include_once 'seccion/cabecera-cierre.inc.php';
 
 
 <div class="container-fluid">
-    <div class="row" style="background-color: black;color: white;padding: .5em 1em;font-size: 1.5em;">
-        <div class="col-2">
-            <a style="color: white;" href="<?php echo RUTA_TIENDA;?>"><i class="fa-solid fa-angle-left"></i></a>
+    <div class="barra-sup">
+        <div class="d-none d-sm-block">
+            <div class="row pc">
+                <div class="col-2">
+                    <a href="<?php echo RUTA_TIENDA;?>"><i class="fa-solid fa-angle-left"></i></a>
+                </div>
+                <div class="col-10">Todos los productos</div>
+            </div>
         </div>
-        <div class="col-10"> Todos los productos</div>
+        <div class="d-block d-sm-none">
+            <div class="row movil">
+                <div class="col-3">
+                    <a href="<?php echo RUTA_TIENDA;?>"><i class="fa-solid fa-angle-left"></i></a>
+                </div>
+                <div class="col-9">Todos los productos</div>
+            </div>
+        </div>
     </div>
+    
     <div class="row">
         <div class="col-12 col-md-6 bg-image" style="background-image: url(<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>) ;">
             <?php
@@ -108,7 +121,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
         </div>
 
         <?php // informacion para moviles  ?>  
-        <div class="col-12 d-block d-sm-none" style="padding: 3em;">
+        <div class="col-12 d-block d-sm-none" style="padding: 3em;margin-top: -2em;background-color: white;border-radius: 2em;">
             <h1 class="textoBold mayusculas" style="letter-spacing: .01em"><?php echo $entrada -> obtener_titulo(); ?></h1>
             <?php 
             if (ControlSesionAdmin::sesion_iniciada()) {

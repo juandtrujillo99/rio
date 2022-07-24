@@ -52,6 +52,8 @@ include_once 'seccion/doc-navbar.inc.php';
 		<div class="row">
 			<div class="col-12 center-align" style="padding:1em 0 1.5em 0;">
 				<p class="textoSubtitulo" style="font-size: 1.5em;line-height: 1.2em;"><?php echo $descripcionAlterna;?></p>
+
+				<div class="d-none d-sm-block"><br><br><hr></div>
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				

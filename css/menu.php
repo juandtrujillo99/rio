@@ -186,9 +186,9 @@ header .enlaces a:hover{color: <?php echo $colorMarca;?>;transition: ease-in .2s
 */
 
 
-.headroom{transition: transform .5s ease;}
-.headroom--pinned{transform: translateY(-100%);}
-.headroom--unpinned{transform: translateY(-60%);}
+.headroom2{transition: transform .5s ease;}
+.headroom2--pinned{transform: translateY(-100%);}
+.headroom2--unpinned{transform: translateY(-60%);}
 
 
 /*Mediaqueries*/
@@ -197,10 +197,6 @@ header .menu-pc {flex-direction: column;}
 header .menu-pc .logo {display: flex;flex-direction: row;justify-content: space-between;width: 100%;padding: 1em;}
 header .menu-pc .logo .btn-menu{display: inline-block;}
 header .menu-pc .enlaces{width: 100%;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;}
-
-
-
-
 
 
 .fondo-pc{
