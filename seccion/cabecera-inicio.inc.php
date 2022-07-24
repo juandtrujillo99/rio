@@ -23,7 +23,7 @@
 		<link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>fuentes.css">
 		<link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>materialize.php">
         <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>bootstrap.css">
-        <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>estilos.php">
+        <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>general.php">
         <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>menu.php">
         <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>aparecer.css">
 

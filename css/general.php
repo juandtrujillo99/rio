@@ -12,7 +12,7 @@ html{scroll-behavior: smooth;}
 
 *::-moz-selection{background: <?php echo $colorMarca3;?>;color: #000;}
 
-*::selection {background: #c9c9c9;color: #000;}
+*::selection {background: #c9b340;color: #000;}
 
 body{font-family: <?php echo $textoBook;?>;}
 
