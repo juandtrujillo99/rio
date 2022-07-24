@@ -83,7 +83,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <a href="<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>">
                 <div class="row">
                     <div class="d-none d-sm-block section"></div>                
-                    <div class="d-block d-sm-none" style="height: 50vh;">
+                    <div class="d-block d-sm-none" style="height: 60vh;">
                         <div class="imageContainer"></div>
                     </div>
                 </div>
@@ -121,8 +121,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
         </div>
 
         <?php // informacion para moviles  ?>  
-        <div class="col-12 d-block d-sm-none" style="padding: 3em;margin-top: -2em;background-color: white;border-radius: 2em;">
-            <h1 class="textoBold mayusculas" style="letter-spacing: .01em"><?php echo $entrada -> obtener_titulo(); ?></h1>
+        <div class="col-12 d-block d-sm-none" style="padding: 3em;margin-top: -2em;background-color: white;border-radius: 2em;box-shadow: 0px -2px 27px -7px rgba(0,0,0,0.75);">
+            <p class="textoBold mayusculas" style="letter-spacing: .01em;font-size:2em;line-height: 1.2em"><?php echo $entrada -> obtener_titulo(); ?></p>
             <?php 
             if (ControlSesionAdmin::sesion_iniciada()) {
                 ?>
