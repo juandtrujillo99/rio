@@ -65,10 +65,15 @@ class EscritorEntradasTienda {
 		if (!isset($entrada)) {
 			return;
 		}
-		$entrada -> obtener_etiqueta();
-		echo '$categorias['.$entrada -> obtener_id().']["abbr"]="'.$entrada -> obtener_id().'";';?><br><?php
-		echo '$categorias['.$entrada -> obtener_id().']["nombre"]="'.$entrada -> obtener_etiqueta().'";';
-		
+		$id=$entrada -> obtener_id();
+		$nombre=$entrada -> obtener_etiqueta();
+
+		$categorias[$entrada -> obtener_id()]['abbr']="$id";
+		$categorias[$entrada -> obtener_id()]['nombre']="$nombre";
+
+
+		echo '<button value="'.$nombre.'">'.$nombre.'</button>';
+
 	}
 
 
