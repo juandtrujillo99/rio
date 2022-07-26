@@ -77,6 +77,7 @@ $descripcionPagina = $descripcionAlterna;
 $imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";
 
 include 'seccion/cabecera-inicio.inc.php';
+include_once 'scripts/categorias.php';
 ?>
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
@@ -103,9 +104,38 @@ include_once 'seccion/doc-navbar.inc.php';
 	            <form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
 					<div class="input-field">
 						<i class="material-icons prefix">search</i>
-						<input type="text" id="autocomplete-input" name="termino-buscar-tienda" <?php if(isset($busqueda)) echo "value='".$busqueda."'" ?> class="autocomplete" required>
+						<input type="text" id="autocomplete-input" name="termino-buscar-tienda" <?php if(isset($busqueda)) echo "value='".$busqueda."'" ?> class="autocomplete">
 						<label for="autocomplete-input">Busca de nuevo</label>
 						<input type="hidden" name="buscar-tienda">
+
+
+
+
+
+
+
+
+
+						<?php
+						for($i=0;$i<count($categorias);$i++){
+							echo '<button name="termino-buscar-tienda" value="'.$categorias[$i]['nombre'].'">'.$categorias[$i]['nombre'].'</option>';
+						}
+						?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 					</div>
 	            </form>	
 	        </div> 
