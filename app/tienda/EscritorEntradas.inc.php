@@ -17,6 +17,18 @@ class EscritorEntradasTienda {
 		}
 	}
 
+	public static function escribir_etiqueta_entradas() {
+		$entradas = RepositorioEntradaTienda::obtener_todas_por_fecha_descendente(Conexion::obtener_conexion());
+
+		if (count($entradas)) {
+
+			foreach ($entradas as $entrada) {
+
+				self::escribir_etiqueta_entrada($entrada);
+			}
+		}
+	}
+
 
 	public static function escribir_cuatro_entradas() {
 		$entradas = RepositorioEntradaTienda::obtener_cuatro_por_fecha_descendente(Conexion::obtener_conexion());
@@ -46,6 +58,17 @@ class EscritorEntradasTienda {
 			</div>
 		</a>
 		<?php
+	}
+
+
+	public static function escribir_etiqueta_entrada($entrada) {
+		if (!isset($entrada)) {
+			return;
+		}
+		$entrada -> obtener_etiqueta();
+		echo '$categorias['.$entrada -> obtener_id().']["abbr"]="'.$entrada -> obtener_id().'";';?><br><?php
+		echo '$categorias['.$entrada -> obtener_id().']["nombre"]="'.$entrada -> obtener_etiqueta().'";';
+		
 	}
 
 

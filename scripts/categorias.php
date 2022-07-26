@@ -1,4 +1,8 @@
 <?php 
+
+EscritorEntradasTienda::escribir_etiqueta_entradas();
+
+
 $categorias[0]['abbr']='etiqueta1';
 $categorias[0]['nombre']='aretes';
 $categorias[1]['abbr']='etiqueta2';

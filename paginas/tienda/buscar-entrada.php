@@ -1,7 +1,29 @@
 <?php
 
+include_once 'app/config.inc.php';
+include_once 'app/Conexion.inc.php';
+include_once 'app/Redireccion.inc.php';
+
+include_once 'app/usuario/RepositorioUsuario.inc.php';
+include_once 'app/usuario/ControlSesion.inc.php';
+include_once 'app/admin/ControlSesionAdmin.inc.php';
 include_once 'app/tienda/EscritorEntradas.inc.php';
-include_once 'app/tienda/RepositorioEntrada.inc.php';
+
+if(!ControlSesion::sesion_iniciada() && !ControlSesionAdmin::sesion_iniciada()) {
+    Conexion :: abrir_conexion();
+} else {
+
+    if (ControlSesionAdmin::sesion_iniciada()) {
+        Conexion :: abrir_conexion();
+        $id = $_SESSION['id_admin'];
+        $admin = RepositorioAdmin :: obtener_admin_por_id(Conexion::obtener_conexion(), $id);
+    }
+    elseif (ControlSesion::sesion_iniciada()) {
+        Conexion :: abrir_conexion();
+        $id = $_SESSION['id_usuario'];
+        $usuario = RepositorioUsuario :: obtener_usuario_por_id(Conexion::obtener_conexion(), $id);
+    }
+}
 
 $busqueda = null;
 $resultados = null;
@@ -77,7 +99,6 @@ $descripcionPagina = $descripcionAlterna;
 $imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";
 
 include 'seccion/cabecera-inicio.inc.php';
-include_once 'scripts/categorias.php';
 ?>
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
@@ -116,11 +137,7 @@ include_once 'seccion/doc-navbar.inc.php';
 
 
 
-						<?php
-						for($i=0;$i<count($categorias);$i++){
-							echo '<button name="termino-buscar-tienda" value="'.$categorias[$i]['nombre'].'">'.$categorias[$i]['nombre'].'</option>';
-						}
-						?>
+						
 
 
 
@@ -137,7 +154,10 @@ include_once 'seccion/doc-navbar.inc.php';
 
 
 					</div>
-	            </form>	
+	            </form>
+	            <?php
+				include 'scripts/categorias.php';	
+				?>	
 	        </div> 
 		</div>
 

@@ -26,34 +26,6 @@ if(!ControlSesion::sesion_iniciada() && !ControlSesionAdmin::sesion_iniciada()) 
 }
 
 
-if (isset($_POST['enviar'])) {
-	Conexion :: abrir_conexion();
-
-	$validador = new ValidadorRegistro($_POST['nombre'], $_POST['email'], Conexion :: obtener_conexion());
-
-
-	if($validador -> registro_valido()){
-		$usuario = new Usuario('', 
-			$validador-> obtener_nombre(), 
-			$validador-> obtener_email(), 
-			'',
-			'');
-
-
-		$usuario_insertado = RepositorioUsuario :: insertar_usuario(Conexion :: obtener_conexion(), $usuario);
-		if ($usuario_insertado) {
-			//redirigir a REGISTRO CORRECTO
-			Redireccion::redirigir(RUTA_REGISTRO_CORRECTO . '/' . $usuario -> obtener_nombre());
-			
-		}
-		else{
-			echo "no sirve";
-		}
-	}
-}
-
-
-
 $titulo = "Inicio | ".$nombreEmpresa;
 $descripcionPagina = $descripcionAlterna;
 $imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";
@@ -80,6 +52,9 @@ include_once 'seccion/doc-navbar.inc.php';
 			<div class="col-12 center-align" style="padding:1em 0 1.5em 0;">
 				<p class="textoSubtitulo" style="font-size: 1.5em;line-height: 1.2em;"><?php echo $descripcionAlterna;?></p>
 				<p class="textoBook" style="padding-top: 1.5em;">Últimos productos</p>
+				<?php
+				include_once 'scripts/categorias.php';	
+				?>
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				
