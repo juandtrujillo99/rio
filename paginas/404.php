@@ -29,7 +29,7 @@ include_once 'seccion/doc-navbar.inc.php';
 				Parece que no encontraste lo que buscabas 
 			</p>
 			<br><br>
-			<a class="btn btn-secundario-animado" href="<?php echo SERVIDOR; ?>">Ver productos</a>
+			<a class="btn btn-secundario-animado" href="<?php echo RUTA_TIENDA; ?>#descripcionAlterna">Ver productos</a>
 		</div>
 	</div>
 </div>

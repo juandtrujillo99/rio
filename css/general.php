@@ -106,15 +106,15 @@ background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMa
 
 
 .btn-secundario-animado{
-  box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;
+  background-color: <?php echo $colorMarca?>;
   padding: .5em 2em;
   font-family: <?php echo $textoBold;?>;
-  color: <?php echo $colorMarca2?>;
+  color: <?php echo $colorMarca4?>;
   background-image: transparent 50%;  
   background-size: 200%;
   background-position: 0% 50%;
   font-size: 1.2em;
-  border-radius: 0;}
+  border-radius: .5em;}
 
 
 .btn-secundario-animado:hover, .btn-principal-animado:active{color: <?php echo $colorMarca2?>;

@@ -29,7 +29,7 @@ if(!ControlSesion::sesion_iniciada() && !ControlSesionAdmin::sesion_iniciada()) 
 
 $titulo = "Joyería ".$nombreEmpresa;
 $descripcionPagina = $descripcionAlterna;
-$imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";
+$imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado.webp";
 
 
 include_once 'seccion/cabecera-inicio.inc.php';
