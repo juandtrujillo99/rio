@@ -210,5 +210,5 @@ background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMa
 
 .barra-sup .pc{background-color: black;color: white;padding: .5em 1em;font-size: 1.5em;}
 .barra-sup .pc a{color: white;}
-.barra-sup .movil{position: absolute;z-index: 9999;font-size: 1.5em;padding: 1.5em 1em;width: 100%;}
+.barra-sup .movil{position: absolute;z-index: 9999;font-size: 1.2em;padding: 1em 1em;width: 100%;}
 .barra-sup .movil a{background-color: rgba(255, 255, 255, 1);padding: .5em 1em;border-radius: 50%}

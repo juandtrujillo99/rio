@@ -31,7 +31,7 @@ include_once 'seccion/cabecera-inicio.inc.php';
 ?>
 
 <script type="text/javascript">const imageUrl = '<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen() ?>';</script>
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=625b4e8e85d62e001964c39a&product=sop' async='async'></script>
+<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=62e668918fce6e001925d9c8&product=sop' async='async'></script>
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
 <link rel="canonical" href="<?php echo $url; ?>">
@@ -61,7 +61,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
         <div class="d-block d-sm-none">
             <div class="row movil">
                 <div class="col-3">
-                    <a href="<?php echo RUTA_TIENDA;?>"><i class="fa-solid fa-angle-left"></i></a>
+                    <a href="<?php echo RUTA_TIENDA;?>#descripcionAlterna"><i class="fa-solid fa-angle-left"></i></a>
                 </div>
                 <div class="col-9">Todos los productos</div>
             </div>
@@ -118,6 +118,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <p><?php echo nl2br($entrada -> obtener_texto()); ?></p>      
             <br><br>
             <div class="sharethis-inline-share-buttons"></div>
+            <br><br>
+            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="pUJ3xRFo" data-limit="5" data-color="b98d32"></script>
         </div>
 
         <?php // informacion para moviles  ?>  
@@ -144,13 +146,12 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <p><?php echo nl2br($entrada -> obtener_texto()); ?></p>      
             <br><br>
             <div class="sharethis-inline-share-buttons"></div>
-
-
+            <br><br>
+            <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="pUJ3xRFo" data-limit="5" data-color="b98d32"></script>
         </div>
         <div class="col-12 row" style="background-color: #0d0d0d; color: white;">
             <div class="col-1"></div>
             <div class="col-10">
-                <script async src="https://comments.app/js/widget.js?3" data-comments-app-website="-69nWccB" data-limit="5" data-color="000"></script>
                 <br><br>
                 <?php include_once 'seccion/tienda/entradas_al_azar.inc.php'; ?>  
                 <br><br>              

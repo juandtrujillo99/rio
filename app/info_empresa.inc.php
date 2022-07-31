@@ -6,7 +6,7 @@
 $nombreEmpresa = "RIO";
 $descripcionNegocio = "Joyería elaborada en ORO Laminado de 18kl";
 $descripcionAlterna = "Con el más alto estándar de fabricación, color y calidad.";
-$urlEmpresa = "joyeriario.cf";
+$urlEmpresa = "joyeriario.com";
 $urlEmpresaAlterna = "http://sylvibrand.cf";
 
 /*Contacto directo*/

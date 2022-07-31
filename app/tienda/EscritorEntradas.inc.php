@@ -18,7 +18,7 @@ class EscritorEntradasTienda {
 	}
 
 	public static function escribir_etiqueta_entradas() {
-		$entradas = RepositorioEntradaTienda::obtener_todas_por_fecha_descendente(Conexion::obtener_conexion());
+		$entradas = RepositorioEntradaTienda::obtener_todas_etiquetas(Conexion::obtener_conexion());
 
 		if (count($entradas)) {
 
@@ -61,18 +61,23 @@ class EscritorEntradasTienda {
 	}
 
 
-	public static function escribir_etiqueta_entrada($entrada) {
+	public static function escribir_etiqueta_entrada($entrada) {//esta funcion solo sirve dentro del formulario de busqueda
 		if (!isset($entrada)) {
 			return;
 		}
-		$id=$entrada -> obtener_id();
-		$nombre=$entrada -> obtener_etiqueta();
+		
+		$categorias['0']['nombre']="Aretes";
+		$categorias['1']['nombre']="Topos";
+		$categorias['2']['nombre']="Pulseras";
+		$categorias['3']['nombre']="Tobillera";
+		$categorias['4']['nombre']="Collar";
 
-		$categorias[$entrada -> obtener_id()]['abbr']="$id";
-		$categorias[$entrada -> obtener_id()]['nombre']="$nombre";
+		for($i=0;$i<count($categorias);$i++){
+			echo '<button class="btn btn-principal" name="termino-buscar-tienda" value="'.$categorias[$i]['nombre'].'">'.$categorias[$i]['nombre'].'</button>';
 
+		}
 
-		echo '<button value="'.$nombre.'">'.$nombre.'</button>';
+	    //no sirve correctamente	
 
 	}
 

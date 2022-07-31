@@ -128,16 +128,25 @@ include_once 'seccion/doc-navbar.inc.php';
 						<input type="text" id="autocomplete-input" name="termino-buscar-tienda" <?php if(isset($busqueda)) echo "value='".$busqueda."'" ?> class="autocomplete">
 						<label for="autocomplete-input">Busca de nuevo</label>
 						<input type="hidden" name="buscar-tienda">
-
-
-
-
-
-
-
-
-
 						
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<?php
+						include 'scripts/categorias.php';	
+						?>					
 
 
 
@@ -155,9 +164,7 @@ include_once 'seccion/doc-navbar.inc.php';
 
 					</div>
 	            </form>
-	            <?php
-				include 'scripts/categorias.php';	
-				?>	
+	            	
 	        </div> 
 		</div>
 
