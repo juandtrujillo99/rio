@@ -26,15 +26,18 @@
 		<div class="col-2 col-md-1">
 			<img  loading="lazy" itemprop="image" class="imagen" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado3.webp">
 		</div>
-		<div class="col-5 valign-wrapper">				
+		<div class="col-md-7 col-6 valign-wrapper">				
 			<p style="padding-left: 1em;">
 				Contáctenos<br>
 				<a href="tel:+57<?php echo $telefonoEmpresa?>" target="_blank"><?php echo "+57 ".$telefonoEmpresa?></a><br>
 				<a href="<?php echo $mailEmpresa?>" target="_blank"><?php echo $emailEmpresa?></a>						
 			</p>					
 		</div>
-		<div class="col-4 d-block d-sm-none">
-			<div class="valign-wrapper social-m" align="right">
+		<div class="col-md-2 col-3 valign-wrapper" align="right">
+			<div class="social-pc d-none d-sm-block">
+				<?php include 'seccion/social.inc.php'; ?>
+			</div>
+			<div class="social-m d-block d-sm-none">
 				<?php include 'seccion/social.inc.php'; ?>
 			</div>
 		</div>

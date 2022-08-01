@@ -70,16 +70,6 @@ include_once 'seccion/cabecera-cierre.inc.php';
     
     <div class="row">
         <div class="col-12 col-md-6 bg-image" style="background-image: url(<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>) ;">
-            <?php
-            if ($entrada -> obtener_url_externa() !== ""){
-            ?>
-            <a class="col modal-trigger textoColorMarca" href="#mostrarDetalle">
-                <img loading="lazy" itemprop="image" src="<?php echo RUTA_TIENDA_COVER.$entrada -> obtener_imagen(); ?>" class="imagen" alt="<?php echo $entrada -> obtener_titulo(); ?>" >
-                <div class="imageContainer"></div>
-            </a>
-            <?php
-            }else{
-                ?>
             <a href="<?php echo RUTA_TIENDA_COVER;?><?php echo $entrada -> obtener_imagen(); ?>">
                 <div class="row">
                     <div class="d-none d-sm-block section"></div>                
@@ -87,10 +77,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
                         <div class="imageContainer"></div>
                     </div>
                 </div>
-            </a>
-            <?php
-            }
-            ?>            
+            </a>            
         </div>
 
         <?php // informacion para pc  ?> 
@@ -104,9 +91,9 @@ include_once 'seccion/cabecera-cierre.inc.php';
                     <button type="submit" class="btn btn-principal" name="editar_entrada">Editar</button>
                 </form>
             <?php 
-            }?>  
-            <br>
-            <div class="textoParrafo1a">SKU: <?php echo $entrada -> obtener_url(); ?></div>             
+            }?>
+            <div class="textoParrafo1a" style="padding-top: .5em;">SKU: <?php echo $entrada -> obtener_url(); ?></div>  
+            <br>             
             <br>
             <div class="row valign-wrapper">
                 <div class="col-4">
@@ -160,22 +147,6 @@ include_once 'seccion/cabecera-cierre.inc.php';
     </div>
 </div>
 
-
-
-
-
-<!-- Modal para cambio de nombre y apellido -->
-<div id="mostrarDetalle" class="modal">
-    <div class="modal-content">
-        <div class="row col-12">
-            <div class="col-md-3"></div>
-            <div class="col-md-6 col-12">
-                <?php echo $entrada -> obtener_url_externa(); ?>                          
-            </div>
-            <div class="col-md-3"></div>
-        </div>        
-    </div>
-</div>
 
 
 <?php
