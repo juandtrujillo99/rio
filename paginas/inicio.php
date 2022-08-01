@@ -45,12 +45,11 @@ include_once 'seccion/doc-navbar.inc.php';
 <?php //body ?>
 
 <div class="container">
-		<?php
-		include_once 'seccion/inicio/portada.inc.php';	
-		?>	
+		
 		<div class="row">
-			<div class="col-12 center-align" style="padding-top: 8em;">
-				<p class="textoBook" style="padding-top: 1.5em;">Últimos productos</p>
+			<div class="col-12 center-align">
+				<p class="textoBook d-block d-sm-none" style="padding:7em 0 1em 0;">Últimos productos</p>
+				<p class="textoBook d-none d-sm-block" style="padding:10em 0 1em 0;">Últimos productos</p>
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				
