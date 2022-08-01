@@ -1,6 +1,5 @@
 'use strict';
 
-
 const imageContainer = document.querySelector('.imageContainer');
 const hud = document.querySelector('#hud');
 
@@ -66,7 +65,7 @@ displayImage.onload = function(){
   imageWidth = displayImage.width;
   imageHeight = displayImage.height;
   imageContainer.appendChild(displayImage);
-  displayImage.addEventListener('mousedown', e => e.preventDefault(), false);
+  displayImage.addEventListener('mouseup', e => e.preventDefault(), false);
   displayDefaultWidth = displayImage.offsetWidth;
   displayDefaultHeight = displayImage.offsetHeight;
   rangeX = Math.max(0, displayDefaultWidth - containerWidth);
@@ -102,25 +101,25 @@ function updateRange() {
 
 function updateHud() {
   let hudText = `<pre>
-<b>Current</b>
-<b>Scale:</b>     ${displayImageCurrentScale.toFixed(4)}
-<b>X:</b>         ${displayImageCurrentX}
-<b>Y:</b>         ${displayImageCurrentY}
+    <b>Current</b>
+    <b>Scale:</b>     ${displayImageCurrentScale.toFixed(4)}
+    <b>X:</b>         ${displayImageCurrentX}
+    <b>Y:</b>         ${displayImageCurrentY}
 
-<b>Range</b>
-<b>rangeX:</b>    ${rangeX}
-<b>rangeMinX:</b> ${rangeMinX}
-<b>rangeMaxX:</b> ${rangeMaxX}
+    <b>Range</b>
+    <b>rangeX:</b>    ${rangeX}
+    <b>rangeMinX:</b> ${rangeMinX}
+    <b>rangeMaxX:</b> ${rangeMaxX}
 
-<b>rangeY:</b>    ${rangeY}
-<b>rangeMinY:</b> ${rangeMinY}
-<b>rangeMaxY:</b> ${rangeMaxY}
+    <b>rangeY:</b>    ${rangeY}
+    <b>rangeMinY:</b> ${rangeMinY}
+    <b>rangeMaxY:</b> ${rangeMaxY}
 
-<b>Updated</b>
-<b>Scale:</b>     ${displayImageScale.toFixed(4)}
-<b>X:</b>         ${displayImageX}
-<b>Y:</b>         ${displayImageY}
-</pre>`;
+    <b>Updated</b>
+    <b>Scale:</b>     ${displayImageScale.toFixed(4)}
+    <b>X:</b>         ${displayImageX}
+    <b>Y:</b>         ${displayImageY}
+    </pre>`;
   hud.innerHTML = hudText;
 }
 

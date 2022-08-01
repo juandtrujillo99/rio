@@ -294,37 +294,34 @@ if(ControlSesion :: sesion_iniciada() && ControlSesionAdmin :: sesion_iniciada()
 }else{//sin inicio de sesion
  
 	//barra de navegación superior e icono menu ?>
-	<nav class="d-block d-sm-none" style="position: fixed;z-index: 2000;">
-		<div class="row valign-wrapper">
-			<div class="col-1"></div>
-			<a class="col-2 waves-effect" href="<?php echo SERVIDOR; ?>">
-				<div>				
-					<img  loading="lazy" itemprop="image" class="imagen" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado.webp">
-				</div>
-			</a>			
-			<div class="col-1"></div>
-			<div class="col-7 valign-wrapper">
-				<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
-					<div class="input-field">
-						<i class="material-icons prefix">search</i>
-						<input type="text" id="autocomplete-input" placeholder="¿Te ayudo a buscar?" name="termino-buscar-tienda" required class="autocomplete">				
-						<input type="hidden" name="buscar-tienda">
-					</div>
-	            </form>	
-			</div>			
-		</div>
-	</nav>
+	
 		
-	<header class="li" id="header"> <!-- navbar content here  --> 	
+	<header class="li" id="header"> <!-- navbar content here  --> 
+
+		<nav class="d-block d-sm-none" style="z-index: 2000;">
+			<div class="row valign-wrapper">
+				<div class="col-1"></div>
+				<a class="col-2 waves-effect" href="<?php echo SERVIDOR; ?>">
+					<div>				
+						<img  loading="lazy" itemprop="image" class="imagen" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado.webp">
+					</div>
+				</a>			
+				<div class="col-1"></div>
+				<div class="col-7 valign-wrapper">
+					<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+						<div class="input-field">
+							<i class="material-icons prefix">search</i>
+							<input type="text" id="autocomplete-input" placeholder="¿Te ayudo a buscar?" name="termino-buscar-tienda" required class="autocomplete">				
+							<input type="hidden" name="buscar-tienda">
+						</div>
+		            </form>	
+				</div>			
+			</div>
+		</nav>
+
+
+
 		<div class="d-none d-sm-block menu-pc">
-			<div class="row" align="center">
-		        <div class="col"></div>
-		        <div class="col">
-		            <img  loading="lazy" itemprop="image" class="imagen-4 logo" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado.webp">
-		            <p class="textoSubtitulo" style="font-size: 1.2em"><?php echo $descripcionAlterna;?></p>
-		        </div>          
-		        <div class="col"></div>
-		    </div>
 			<div class="row">
 				<div class="col-3 row valign-wrapper">
 					<div class="col-1"></div>
@@ -335,7 +332,7 @@ if(ControlSesion :: sesion_iniciada() && ControlSesionAdmin :: sesion_iniciada()
 					</div>
 					<div class="col-1"></div> 
 					<div class="col-7">
-						<p><?php echo $descripcionNegocio;?></p>
+						<p><?php echo $descripcionAlterna;?></p>
 					</div>
 				</div>
 				<div class="col-5 valign-wrapper">

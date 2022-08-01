@@ -179,17 +179,17 @@ header .enlaces a{font-family: <?php echo $textoBold;?>;color: <?php echo $color
 header .enlaces a:hover{color: <?php echo $colorMarca;?>;transition: ease-in .2s;}
 
 
- /* Efectos Menu
+Efectos Menu
 .headroom{transition: transform .5s ease;}
-.headroom--pinned{transform: translateY(0%);}
-.headroom--unpinned{transform: translateY(-100%);}
-*/
+.headroom--pinned{transform: translateY(0%);transition: transform .5s ease;}
+.headroom--unpinned{transform: translateY(-100%);transition: transform .5s ease;}
 
 
+/*
 .headroom{transition: transform .5s ease;}
 .headroom--pinned{transform: translateY(-100%);}
 .headroom--unpinned{transform: translateY(-60%);}
-
+*/
 
 /*Mediaqueries*/
 @media screen and (max-width: 700px){
