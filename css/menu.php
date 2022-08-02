@@ -169,7 +169,7 @@ header{
     width: 100%;
     top: 0px;
     box-shadow: 0px .1px 5px 0px rgba(0,0,0,0.1);
-    z-index:2000;
+    z-index:10;
 }
 
 header{width: 100%;background-color: <?php echo $colorMarca4;?>;}
