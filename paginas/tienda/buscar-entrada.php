@@ -111,61 +111,12 @@ include_once 'seccion/doc-navbar.inc.php';
 
 <div class="container">
 	<div class="col-12">
-		<div class="row" style="padding: 6em 0 2.5em 0;" align="center">
-		    <div class="col-1 d-block d-sm-none"></div>
-		    <div class="col-10 col-md-6">
-		    	<br>
-		        <p class="textoBlack textoTitulo"><?php echo $titulo; ?></p> 
+		<div class="row" style="padding: 5em 0 2.5em 0;" align="center">
+		    <div class="col-1"></div>
+		    <div class="col-10" align="center">
+		        <p class="textoBlack textoSubtitulo"><?php echo $titulo; ?></p> 
 		    </div>    
-		    <div class="col-1 col-md-1"></div>	        
-		    
-	        <div class="col-1 d-block d-sm-none"></div>
-	        <div class="col-9 col-md-4">
-	        	<div class="d-block d-sm-none"><br><br></div>
-	            <form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
-					<div class="input-field">
-						<i class="material-icons prefix">search</i>
-						<input type="text" id="autocomplete-input" name="termino-buscar-tienda" <?php if(isset($busqueda)) echo "value='".$busqueda."'" ?> class="autocomplete">
-						<label for="autocomplete-input">Busca de nuevo</label>
-						<input type="hidden" name="buscar-tienda">
-						
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						<?php
-						include 'scripts/categorias.php';	
-						?>					
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-					</div>
-	            </form>
-	            	
-	        </div> 
+		    <div class="col-1"></div>	         
 		</div>
 
 		<div class="row">		

@@ -10,9 +10,9 @@ html{scroll-behavior: smooth;}
 
 *{margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;}
 
-*::-moz-selection{background: <?php echo $colorMarca3;?>;color: #000;}
+*::-moz-selection{background: <?php echo $colorMarca;?>;color: #fff;}
 
-*::selection {background: #c9b340;color: #000;}
+*::selection {background: <?php echo $colorMarca;?>;color: #fff;}
 
 body{font-family: <?php echo $textoBook;?>;}
 
@@ -42,7 +42,7 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
 .textoTitulo{font-size: 3em;font-family: <?php echo $textoBold;?>;letter-spacing: -.01em;line-height: 1em;}
 .textoTitulo1{font-size: 2.5em;font-family: <?php echo $textoBold;?>;letter-spacing: .01em;line-height: 1em;}
 .textoTitulo1a{font-size: 2em;font-family: <?php echo $textoBlack;?>;letter-spacing: -.01em;line-height: 1em;}
-.textoSubtitulo{font-size: 2em;font-family: <?php echo $textoBold;?>;}
+.textoSubtitulo{font-size: 2em;font-family: <?php echo $textoBold;?>;line-height: 1.2em;}
 .textoSubtitulo1{font-size: 2em; margin-top: -.4em;}
 .textoSubtituloMarginIzq{font-size: 2em;margin-left: 1em;margin-top: -1em;}
 .textoParrafo{font-size: 1.5em;line-height: 1em;font-family: <?php echo $textoBook;?>;}
@@ -87,7 +87,7 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
   box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;
   padding: .5em 2em;
   font-family: <?php echo $textoBold;?>;
-  color: <?php echo $colorMarca4?>;
+  color: <?php echo $colorMarca2?>;
   background-image: transparent 50%;
   background-size: 200%;
   background-position: 0% 50%;

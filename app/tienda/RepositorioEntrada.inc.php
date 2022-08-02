@@ -101,38 +101,6 @@ class RepositorioEntradaTienda {
     }
 
 
-    public static function obtener_todas_etiquetas($conexion) {
-        $entradas = [];
-
-        if (isset($conexion)) {
-            try {
-                $sql = "SELECT * FROM tienda ORDER BY etiqueta ASC LIMIT 10";
-                $sentencia = $conexion -> prepare($sql);
-                $sentencia -> execute();
-                $resultado = $sentencia -> fetchAll();
-
-
-                if (count($resultado)) {
-                    foreach ($resultado as $fila) {
-                        $entradas[] = new EntradaTienda(
-                                $fila['id'], $fila['autor_id'], $fila['url'], $fila['imagen'], $fila['url_externa'], $fila['precio'], $fila['titulo'],
-                                $fila['texto'], $fila['etiqueta'], $fila['fecha'], $fila['activa']
-                        );            
-
-                        //var_dump($resultado);
-
-                    }
-                }
-
-
-
-            } catch (PDOException $ex) {
-                print 'ERROR: '.$ex -> getMessage();
-            }
-        }
-        return $entradas;
-    }
-
     public static function obtener_entrada_por_url($conexion, $url) {
         $entrada = null;
 
