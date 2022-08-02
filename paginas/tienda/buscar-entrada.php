@@ -94,6 +94,7 @@ if (isset($_POST['busqueda_avanzada']) && isset($_POST['campos'])) {
 	}
 }
 
+
 $titulo = "Resultados de Búsqueda";
 $descripcionPagina = $descripcionAlterna;
 $imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";

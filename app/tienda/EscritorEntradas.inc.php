@@ -109,7 +109,7 @@ class EscritorEntradasTienda {
 			return;
 		}
 		?>
-		<a href="<?php echo RUTA_ENTRADA_TIENDA . '/' . $entrada -> obtener_url() ?>" class="col-6 col-md-3" style="padding:.5em 1em;">
+		<a target="_blank" href="<?php echo RUTA_ENTRADA_TIENDA . '/' . $entrada -> obtener_url() ?>" class="col-6 col-md-3" style="padding:.5em 1em;">
 			<div class="row card" style="background-color: white;color: black;box-shadow: none;border: 0;">
 				<div class="card-image">                    
 					<div align="center">   
@@ -130,7 +130,7 @@ class EscritorEntradasTienda {
 			return;
 		}
 		?>
-		<a href="<?php echo RUTA_ENTRADA_TIENDA . '/' . $entrada -> obtener_url() ?>" class="col-6 col-md-3" style="padding:.5em 1em;">
+		<a target="_blank" href="<?php echo RUTA_ENTRADA_TIENDA . '/' . $entrada -> obtener_url() ?>" class="col-6 col-md-3" style="padding:.5em 1em;">
 			<div class="row card" style="background-color: white;color: black;box-shadow: none;border: 0;">
 				<div class="card-image">                    
 					<div align="center">   

@@ -10,14 +10,14 @@ $categorias['4']['nombre']="Tobilleras";
 ?>
 
 
-	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
-		<div class="input-field">
-			<input type="hidden" name="buscar-tienda">
-			<?php
-				for($i=0;$i<count($categorias);$i++){
-					echo '<button style="font-size: .9em;margin:.5em;" class="btn btn-principal-animado" name="termino-buscar-tienda" value="'.$categorias[$i]['nombre'].'">'.$categorias[$i]['nombre'].'</button>';
-				}
-			?>
-		</div>
-    </form>			
+<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+	<div class="input-field">
+		<input type="hidden" name="buscar-tienda">
+		<?php
+			for($i=0;$i<count($categorias);$i++){
+				echo '<button style="font-size: .9em;margin:.5em;" class="btn btn-principal" name="termino-buscar-tienda" value="'.$categorias[$i]['nombre'].'">'.$categorias[$i]['nombre'].'</button>';
+			}
+		?>
+	</div>
+</form>			
 
