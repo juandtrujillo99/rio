@@ -44,13 +44,12 @@ include_once 'seccion/doc-navbar.inc.php';
 
 
 
-<div class="container">
-
-		
-		
+<div class="container">		
 		<div class="row">
-			<?php include_once 'scripts/categorias.php'; ?>
-
+			<div class="col-12 center-align" style="padding:6em 0 2em 0; font-size: 1em;">
+				<div class="d-none d-sm-block"><br><br></div>
+				<?php include_once 'scripts/categorias.php'; ?>
+			</div>
 
 			<div class="col-12 center-align">
 				<p class="textoBook d-block d-sm-none">Últimos productos</p>

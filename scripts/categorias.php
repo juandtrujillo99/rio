@@ -9,8 +9,7 @@ $categorias['4']['nombre']="Pulseras";
 $categorias['4']['nombre']="Tobilleras";
 ?>
 
-<div class="col-12 center-align" style="padding:6em 0 2em 0; font-size: 1em;">
-	<div class="d-none d-sm-block"><br><br></div>
+
 	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
 		<div class="input-field">
 			<input type="hidden" name="buscar-tienda">
@@ -21,4 +20,4 @@ $categorias['4']['nombre']="Tobilleras";
 			?>
 		</div>
     </form>			
-</div>
+
