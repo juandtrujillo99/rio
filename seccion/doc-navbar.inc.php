@@ -299,13 +299,13 @@ if(ControlSesion :: sesion_iniciada() && ControlSesionAdmin :: sesion_iniciada()
 	<header class="li" id="header"> <!-- navbar content here  --> 
 
 		<nav class="d-block d-sm-none" style="z-index: 10;">
-			<div class="row valign-wrapper">
+			<div class="row">
 				<div class="col-1"></div>
-				<a class="col-2 waves-effect" href="<?php echo SERVIDOR; ?>">
-					<div>				
+				<div class="col-2 waves-effect">
+					<a href="<?php echo RUTA_TIENDA; ?>">
 						<img  loading="lazy" itemprop="image" class="imagen" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado.webp">
-					</div>
-				</a>			
+					</a>
+				</div>			
 				<div class="col-1"></div>
 				<div class="col-7 valign-wrapper row">
 					<a class="waves-effect waves-light modal-trigger" style="display: inline-block;position: absolute;right: 1.5em;" href="#openBuscador">

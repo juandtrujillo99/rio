@@ -22,7 +22,7 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
 /*barra de scroll*/
 
 .bg-image{background-position: center center; background-attachment: scroll; background-size: cover;}
-
+.sombra{box-shadow: 0px .1px 5px 0px rgba(0,0,0,0.5);}
 
 .mayusculas{text-transform: uppercase;}
 .minusculas{text-transform: lowercase;}

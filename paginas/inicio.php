@@ -33,15 +33,13 @@ $imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado.webp";
 
 include_once 'seccion/cabecera-inicio.inc.php';
 ?>
+<link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>scroll-x.php">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
 <?php
 include_once 'seccion/cabecera-cierre.inc.php';
 include_once 'seccion/doc-navbar.inc.php';
 ?>
-
-
-
 
 
 <div class="container">		

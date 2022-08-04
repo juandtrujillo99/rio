@@ -61,9 +61,10 @@ include_once 'seccion/doc-navbar.inc.php';
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				
 				<div class="col-md-10 col-12 row">
-					<?php EscritorEntradasTienda::escribir_entradas(); ?>
+					<?php EscritorEntradasTienda::escribir_entradas(); ?>					
 				</div>
-				<div class="col-1"></div>	
+				<div class="col-1"></div>
+				<div class="col-12"><br><br></div>	
 			</div>
 		</div>
 </div>
