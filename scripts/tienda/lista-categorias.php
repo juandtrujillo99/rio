@@ -1,6 +1,6 @@
 <?php
 
-$categorias['0']['img']="RIO14-07-2022ggIARETE-CIRCONIA-REDONDA-CRIST-BLANCA.jpeg";
+$categorias['0']['img']="RIO04-08-2022r82.jpg";
 $categorias['0']['nombre']="Topos y aretes";
 
 $categorias['1']['img']="RIO04-08-2022I2rwhoami.jpg";

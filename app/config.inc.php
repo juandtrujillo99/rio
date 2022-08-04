@@ -23,6 +23,7 @@ include_once 'info_empresa.inc.php';
 	define("RUTA_BLOG", SERVIDOR."/blog");
 	define("RUTA_TIENDA", SERVIDOR."/tienda");
 	define("RUTA_LEGAL", SERVIDOR."/terminos-condiciones");
+	define("RUTA_TIENDA_COVER_CATEGORIAS", SERVIDOR."/cover-categorias");
 
 //ADMIN
 	//Registro y login administradores
@@ -95,6 +96,7 @@ include_once 'info_empresa.inc.php';
 	define("RUTA_VIDEOS", SERVIDOR."/videos/");
 	define("RUTA_BLOG_COVER", SERVIDOR."/assets/blog/cover/");
 	define("RUTA_TIENDA_COVER", SERVIDOR."/assets/tienda/cover/");
+	define("RUTA_TIENDA_CATEGORIAS", SERVIDOR."/assets/tienda/categorias/");
 
 //PDFs subidos
 	define("RUTA_GUIA_TALLAS_PDF", SERVIDOR."/pdf/guia-tallas");

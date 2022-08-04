@@ -11,7 +11,7 @@ include_once 'tienda/lista-categorias.php';
 			?>
 			<div class="media-element">
 				<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>">
-					<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_COVER.$categorias[$i]["img"];?>);"></div>
+					<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
 					<p><?php echo $categorias[$i]['nombre'];?></p>
 				</button>
 			</div>
@@ -56,6 +56,44 @@ if(ControlSesionAdmin :: sesion_iniciada()&&($admin -> obtener_nombre()=="Juan")
 			    </div>
 			    <div class="col-12">
 			    	<p>Script lista-categorias</p>
+					<div class="row">					
+						<div class="col-12 center-align">
+							<a href="<?php echo RUTA_TIENDA_COVER_CATEGORIAS ;?>" target="_blank"><h3>Archivos en carpeta</h3></a>
+							<br>
+						</div>          
+						<?php 
+
+
+						/////////////ENLISTAR LOS FICHEROS EXISTENTES
+						$listar = null;
+						$carpeta = "./assets/tienda/categorias/";//carpeta donde se guardan los archivos
+						$directorio=opendir($carpeta);
+
+
+						while ($elemento = readdir($directorio)){
+							if ($elemento != '.' && $elemento != '..'){
+								if (is_dir($carpeta.$elemento)){
+								?>
+								<div class="col-3">
+									<img width="100%" src="<?php echo $carpeta.$elemento ;?>">
+									<p><?php echo $elemento ;?></p>
+								</div>
+								<?php
+								}else{
+								?>
+								<div class="col-3">
+									<div class="img-profile bg-cover" style="background-image:url(<?php echo $carpeta.$elemento ;?>);"></div>
+									<p><?php echo $elemento ;?></p>   
+								</div>            
+								<?php
+								}
+							}
+						}
+						?>        
+					</div>
+
+
+
 			    </div>	
 			</div>
 		</div>
