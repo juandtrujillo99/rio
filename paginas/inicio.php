@@ -37,6 +37,9 @@ include_once 'seccion/cabecera-inicio.inc.php';
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>recortar-imagen.css">
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
 <?php
+if(ControlSesionAdmin :: sesion_iniciada()){
+	include_once 'scripts/tienda/barra-progreso-archivo-imagen.php';//script que sube las imagenes de las entradas
+}
 include_once 'seccion/cabecera-cierre.inc.php';
 include_once 'seccion/doc-navbar.inc.php';
 ?>
@@ -50,8 +53,8 @@ include_once 'seccion/doc-navbar.inc.php';
 			</div>
 
 			<div class="col-12 center-align">
-				<p class="textoBook d-block d-sm-none">Últimos productos</p>
-				<p class="textoBook d-none d-sm-block">Últimos productos</p>
+				<p class="textoBook d-block d-sm-none">Nuevos productos</p>
+				<p class="textoBook d-none d-sm-block">Nuevos productos</p>
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				

@@ -98,7 +98,7 @@ include_once 'info_empresa.inc.php';
 
 //PDFs subidos
 	define("RUTA_GUIA_TALLAS_PDF", SERVIDOR."/pdf/guia-tallas");
-	define("RUTA_EBOOK_PDF", SERVIDOR."/pdf/ebook");
+	define("RUTA_EBOOK_PDF", SERVIDOR."/pdf/ebook/");
 	
 	define("RUTA_CSS", SERVIDOR."/css/");
 	define("RUTA_JS", SERVIDOR."/js/");
