@@ -44,11 +44,15 @@ if($partes_ruta[0] == 'rio'){
 			case 'tienda':
 			$ruta_elegida = 'paginas/tienda.php';
 			break;
+			//link tree
+			case 'enlaces':
+			$ruta_elegida = 'paginas/linktree.php';
+			break;
 			//terminos y condiciones
 			case 'terminos-condiciones':
 			$ruta_elegida = 'paginas/legal.php';
 			break;
-			//pagina donde estan todas las vistas prvias de la tienda
+			//pagina donde estan todas las imagenes que se utilizan en la seccion categorias
 			case 'cover-categorias':
 			$ruta_elegida = 'paginas/tienda/lista-categorias.php';
 			break;

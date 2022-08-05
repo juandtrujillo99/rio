@@ -60,7 +60,6 @@ include_once 'seccion/doc-navbar.inc.php';
 					<div class="d-none d-sm-block"><br><br></div>
 					<?php include_once 'scripts/categorias.php'; ?>
 				</div>
-				<hr>
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				

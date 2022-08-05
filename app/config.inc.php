@@ -20,7 +20,7 @@ include_once 'info_empresa.inc.php';
 	define("SERVIDOR", "http://localhost/rio");//carpeta raiz (la que contiene todos los archivos para el funcionamiento de la página)
 	define("RUTA_404", SERVIDOR."/not-found");
 	define("RUTA_INICIO_USUARIO", SERVIDOR."/inicio");//para los usuarios que iniciaron sesion
-	define("RUTA_BLOG", SERVIDOR."/blog");
+	define("RUTA_ENLACES", SERVIDOR."/enlaces");
 	define("RUTA_TIENDA", SERVIDOR."/tienda");
 	define("RUTA_LEGAL", SERVIDOR."/terminos-condiciones");
 	define("RUTA_TIENDA_COVER_CATEGORIAS", SERVIDOR."/cover-categorias");
