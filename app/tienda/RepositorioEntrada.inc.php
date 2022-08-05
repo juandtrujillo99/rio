@@ -74,7 +74,7 @@ class RepositorioEntradaTienda {
 
         if (isset($conexion)) {
             try {
-                $sql = "SELECT * FROM tienda ORDER BY fecha DESC LIMIT 300";
+                $sql = "SELECT * FROM tienda ORDER BY titulo ASC LIMIT 300";
 
                 $sentencia = $conexion -> prepare($sql);
 

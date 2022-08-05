@@ -47,7 +47,7 @@ include_once 'seccion/doc-navbar.inc.php';
 
 <div class="container">		
 		<div class="row">
-			<div class="col-12 center-align" style="padding:6em 0 2em 0; font-size: 1em;">
+			<div class="col-12 center-align" style="padding:6em 0 3em 0; font-size: 1em;">
 				<div class="d-none d-sm-block"><br><br></div>
 				<?php include_once 'scripts/categorias.php'; ?>
 			</div>
@@ -55,6 +55,7 @@ include_once 'seccion/doc-navbar.inc.php';
 			<div class="col-12 center-align">
 				<p class="textoBook d-block d-sm-none">Nuevos productos</p>
 				<p class="textoBook d-none d-sm-block">Nuevos productos</p>
+				<br>	
 			</div>
 			<div class="col-12 row">
 				<div class="col-md-1"></div>				
@@ -62,10 +63,8 @@ include_once 'seccion/doc-navbar.inc.php';
 					<?php EscritorEntradasTienda::escribir_cuatro_entradas(); ?>
 				</div>
 				<div class="col-md-1"></div>	
-				<div class="col-12 center-align">	
-					<br>				
+				<div class="col-12 center-align" style="padding:1em 0 3em 0">					
 				    <a class="btn btn-secundario-animado" href="<?php echo RUTA_TIENDA; ?>"><p class="textoBold">Ver más</p></a>
-				    <br><br><br>
 				</div>
 			</div>
 		</div>
