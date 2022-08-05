@@ -61,7 +61,7 @@ include_once 'seccion/doc-navbar.inc.php';
 				<div class="col-md-10 col-12 row">
 					<?php EscritorEntradasTienda::escribir_cuatro_entradas(); ?>
 				</div>
-				<div class="col-1"></div>	
+				<div class="col-md-1"></div>	
 				<div class="col-12 center-align">	
 					<br>				
 				    <a class="btn btn-secundario-animado" href="<?php echo RUTA_TIENDA; ?>"><p class="textoBold">Ver más</p></a>

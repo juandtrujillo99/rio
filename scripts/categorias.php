@@ -2,24 +2,47 @@
 include_once 'tienda/lista-categorias.php';
 ?>
 
-	
-<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
-	<div class="media-scroller snaps-inline sombra">
-		<input type="hidden" name="buscar-tienda">
-		<?php
-		for($i=0;$i<count($categorias);$i++){
-			?>
-			<div class="media-element">
-				<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>">
-					<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
-					<p><?php echo $categorias[$i]['nombre'];?></p>
-				</button>
-			</div>
+<div class="d-none d-sm-block">
+	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+		<div class="media-scroller snaps-inline sombra">
+			<input type="hidden" name="buscar-tienda">
 			<?php
-			}
-		?>
-	</div>	
-</form>	
+			for($i=0;$i<count($categorias);$i++){
+				?>
+				<div class="media-element">
+					<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>">
+						<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
+						<p><?php echo $categorias[$i]['nombre'];?></p>
+					</button>
+				</div>
+				<?php
+				}
+			?>
+		</div>	
+	</form>	
+</div>	
+
+
+<div class="d-block d-sm-none">
+	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+		<div class="media-scroller-m snaps-inline sombra">
+			<input type="hidden" name="buscar-tienda">
+			<?php
+			for($i=0;$i<count($categorias);$i++){
+				?>
+				<div class="media-element">
+					<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>">
+						<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
+						<p><?php echo $categorias[$i]['nombre'];?></p>
+					</button>
+				</div>
+				<?php
+				}
+			?>
+		</div>	
+	</form>	
+</div>
+
 
 <?php
 if(ControlSesionAdmin :: sesion_iniciada()&&($admin -> obtener_nombre()=="Juan")){

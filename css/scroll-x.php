@@ -16,6 +16,7 @@
   border-radius: 1em;
   overflow-x: auto;
   overscroll-behavior-inline: contain;
+
 }
 
 /*barra de scroll*/
@@ -27,6 +28,43 @@
 .media-scroller--with-groups {
   grid-auto-columns: 80%;
 }
+
+
+
+
+
+
+
+.media-scroller-m {
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 15rem;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+  border-radius: 1em;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  
+}
+
+/*barra de scroll*/
+.media-scroller-m::-webkit-scrollbar {background: <?php echo $colorMarca4;?>;height: .001em;}
+.media-scroller-m::-webkit-scrollbar-thumb {
+  background: <?php echo $colorMarca;?>;border-radius: 1em;border-right: 2px solid <?php echo $colorMarca;?>;}
+/*barra de scroll*/
+
+.media-scroller-m--with-groups {
+  grid-auto-columns: 80%;
+}
+
+
+
+
+
+
+
 
 .media-group {
   display: grid;

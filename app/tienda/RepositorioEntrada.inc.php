@@ -45,7 +45,7 @@ class RepositorioEntradaTienda {
 
         if (isset($conexion)) {
             try {
-                $sql = "SELECT * FROM tienda ORDER BY fecha DESC LIMIT 8";//aqui se modifica el numero de entradas que deben aparecer en una pagina especifica
+                $sql = "SELECT * FROM tienda ORDER BY fecha DESC LIMIT 4";//aqui se modifica el numero de entradas que deben aparecer en una pagina especifica
 
                 $sentencia = $conexion -> prepare($sql);
 
