@@ -28,7 +28,7 @@ if(!ControlSesion::sesion_iniciada() && !ControlSesionAdmin::sesion_iniciada()) 
 
 $titulo = "Escoge una opción";
 $descripcionPagina = $descripcionAlterna;
-$imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado.webp";
+$imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado3.webp";
 
 
 include_once 'seccion/cabecera-inicio.inc.php';
@@ -42,21 +42,21 @@ include_once 'seccion/cabecera-cierre.inc.php';
 <div class="container-fluid section" style="background-image: url(<?php echo RUTA_IMG_OPTIMIZADA.'fondo/linktree-m.webp';?>);background-size: cover;background-repeat: none;background-attachment: fixed;background-position: bottom center;">    
 
     <div class="row" align="center">
-        <div class="col-12" style="margin-top: 6em;"></div>
+        <div class="col-12" style="margin-top: 8em;"></div>
 
         <div class="col-12">
             <div class="col-2 col-md-4"></div>
             <div class="col-8 col-md-4">
                 <img itemprop="image" loading="lazy" src="<?php echo RUTA_IMG_OPTIMIZADA;?>logo/cuadrado.webp" class="imagen-2 circle" style="padding:1em;background-color: white;"> 
                 <br><br>
-                <p class="mayusculas textoBold" style="font-size: 1.1em;"><b>Con el más alto estándar de fabricación, color y calidad.</b></p>               
+                <p class="mayusculas textoBold" style="font-size: 1.1em;"><b><?php echo $descripcionAlterna ?></b></p>               
             </div>
             <div class="col-2 col-md-4"></div>   
         </div> <?php ///bien?>
 
         <div class="d-none d-sm-block col-md-3"></div>
         <div class="anime-1 row col-12 col-md-6">
-            <div class="col-12" style="margin-top:6em;"></div>
+            <div class="col-12" style="margin-top:8em;"></div>
             <div class="col-1"></div>  
             <div class="col-10 row">  
 	            <div class="col-12">              

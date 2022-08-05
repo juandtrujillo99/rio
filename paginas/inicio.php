@@ -28,7 +28,7 @@ if(!ControlSesion::sesion_iniciada() && !ControlSesionAdmin::sesion_iniciada()) 
 
 $titulo = "Inicio | ".$nombreEmpresa;
 $descripcionPagina = $descripcionAlterna;
-$imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado.webp";
+$imagenCompartida = RUTA_IMG_OPTIMIZADA."logo/cuadrado3.webp";
 
 
 include_once 'seccion/cabecera-inicio.inc.php';

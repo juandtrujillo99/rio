@@ -13,7 +13,6 @@ $urlEmpresaAlterna = "http://sylvibrand.cf";
 $telefonoEmpresa = "3244581842";
 $telefonoSoporteEmpresa = "643504046";
 $whatsappEmpresa = "https://wa.me/57".$telefonoEmpresa;
-$consultarInscripcion = "https://wa.me/57".$telefonoEmpresa;
 $whatsappCompra = "https://wa.me/57".$telefonoEmpresa."?text=Hola%2C%20deseo%20comprar%20este%20producto";
 $olvidePassword = "https://wa.me/34".$telefonoSoporteEmpresa."?text=Hola%2C%20olvidé%20mi%20contraseña%20%F0%9F%99%82";
 $emailEmpresa = "idnunez04@gmail.com";
