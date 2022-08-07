@@ -28,14 +28,14 @@
                         ?>  
                     <div class="col-12 col-md-6" style="background-color:black;padding: 2em 0;">
                         <br>
-                        <a target="_blank" class="btn btn-principal-animado" href="<?php echo SERVIDOR.'/assets/fotos-perfil/admin/'.$admin->obtener_nombre(); ?>" data-lightbox="Foto de perfil" data-title="Foto de perfil">Ver foto</a>
-                        <input class="btn btn-principal-animado" type="submit" value="Eliminar" name="borrar"><br>
+                        <a target="_blank" class="btn btn-secundario-animado" href="<?php echo SERVIDOR.'/assets/fotos-perfil/admin/'.$admin->obtener_nombre(); ?>" data-lightbox="Foto de perfil" data-title="Foto de perfil">Ver foto</a>
+                        <input class="btn btn-secundario-animado" type="submit" value="Eliminar" name="borrar"><br>
                     </div>
                     <div class="d-block d-sm-none col-1"></div>
                     <div class="col-10 col-md-6" style="padding: 2em 0;">            
-                        <label class="btn btn-secundario-animado" for="archivo_subido" id="label-archivo" title="Selecciona una foto" style="margin-bottom: 0">Cambiar foto</label>  
+                        <label class="btn btn-principal-animado" for="archivo_subido" id="label-archivo" title="Selecciona una foto" style="margin-bottom: 0">Cambiar foto</label>  
                         <input class="d-none" type="file" name="archivo_subido" id="archivo_subido">    
-                        <input class="btn btn-secundario-animado" type="submit" value="Subir" name="guardar_imagen" id="guardar_imagen"><br><br>
+                        <input class="btn btn-principal-animado" type="submit" value="Subir" name="guardar_imagen" id="guardar_imagen"><br><br>
                         <p class="grey-text"><i class="fa-solid fa-circle-info"></i> Si deseas cambiar tu foto de perfil primero presiona <b>CAMBIAR FOTO</b> y después <b>SUBIR</b>.</p> 
                     </div>   
                     <div class="d-block d-sm-none col-1"></div>             
@@ -64,7 +64,7 @@
                     </div>
                     <div class="d-block d-sm-none col-1"></div>
                     <div class="col-10 col-md-6 center" style="padding: 4em 0;">            
-                        <label class="btn btn-secundario-animado" for="archivo_subido" id="label-archivo" title="Selecciona una foto" style="margin-bottom: 0">Seleccionar foto</label>  
+                        <label class="btn btn-principal-animado" for="archivo_subido" id="label-archivo" title="Selecciona una foto" style="margin-bottom: 0">Seleccionar foto</label>  
                         <input class="d-none" type="file" name="archivo_subido" id="archivo_subido">    
                         <input class="btn btn-secundario-animado" type="submit" value="Subir" name="guardar_imagen" id="guardar_imagen"><br><br>
                         <p class="grey-text"><i class="fa-solid fa-circle-info"></i> Primero presiona <b>SELECCIONAR FOTO</b> y después <b>SUBIR</b>.</p> 
@@ -86,20 +86,5 @@
         ?>
     </div>
     <div class="col-1 col-md-4"></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </div>

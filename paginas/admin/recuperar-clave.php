@@ -28,7 +28,7 @@ include_once 'seccion/doc-navbar.inc.php';
 	    	<div class="col-1 col-md-3"></div>
 	    	<div class="col-10 col-md-6">
 	    		<div class="col-12" align="left">
-	    			<p>Escribe el correo electrónico se tu usuario para comenzar la recuperación.</p>
+	    			<p>Escribe el correo electrónico de tu usuario para comenzar la recuperación.</p>
 	    			<br><br>
 	    		</div>
 	    		<form role="form" method="post" class="col-12" action="<?php echo RUTA_GENERAR_URL_SECRETA_ADMIN; ?>">

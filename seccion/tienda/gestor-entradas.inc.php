@@ -7,9 +7,9 @@
 	<div class="col-1"></div>
 	<div class="col-1"></div>
 	<div class="col-10">
-		<a href="<?php echo RUTA_NUEVA_ENTRADA_TIENDA; ?>" class="btn btn-secundario-animado" role="button" id="boton-nueva-entrada">Crear entrada</a>
-		<br>
-		<br>
+		<div style="padding: 1.2em 0">
+			<a href="<?php echo RUTA_NUEVA_ENTRADA_TIENDA; ?>" class="btn btn-principal-animado" role="button" id="boton-nueva-entrada">Nuevo producto</a>
+		</div>		
 		<div class="row">
 			<?php 
 				if (count($array_entradas) > 0) {
@@ -56,9 +56,10 @@
 					<?php
 				} else {
 					?>
-					<h3 class="text-center">Todavía no has escrito ninguna entrada</h3>
-					<br>
-					<br>
+					<div class="col-12">
+						<hr>
+						<p>Cuando agregues productos se mostrarán aquí</p>
+					</div>
 					<?php
 				}
 			?>

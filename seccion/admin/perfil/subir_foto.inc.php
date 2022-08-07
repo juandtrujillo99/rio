@@ -24,7 +24,7 @@ if(isset($_POST['guardar_imagen']) && !empty($_FILES['archivo_subido']['tmp_name
 						<p>El archivo no puede pesar más de 500kb.</p>
 					</div>
 					<div class="card-action">
-						<a href="" class=" btn btn-principal-animado">Entendido</a>
+						<a href="" class=" btn btn-secundario-animado">Entendido</a>
 					</div>
 				</div>
 			</div>
@@ -45,7 +45,7 @@ if(isset($_POST['guardar_imagen']) && !empty($_FILES['archivo_subido']['tmp_name
 						<p>Sólo se admiten los formatos JPG, JPEG, PNG y GIF.</p>
 					</div>
 					<div class="card-action">
-						<a href="" class=" btn btn-principal-animado">Entendido</a>
+						<a href="" class=" btn btn-secundario-animado">Entendido</a>
 					</div>
 				</div>
 			</div>
@@ -73,7 +73,7 @@ if(isset($_POST['guardar_imagen']) && !empty($_FILES['archivo_subido']['tmp_name
 							<p>Es posible que el cambio tarde unos momentos en aparecer en toda la plataforma.</p>
 						</div>
 						<div class="card-action">
-							<a href="" class=" btn btn-principal-animado">Entendido</a>
+							<a href="" class=" btn btn-secundario-animado">Entendido</a>
 						</div>
 					</div>
 				</div>
@@ -91,7 +91,7 @@ if(isset($_POST['guardar_imagen']) && !empty($_FILES['archivo_subido']['tmp_name
 							<p>Intentalo nuevamente más tarde.</p>
 						</div>
 						<div class="card-action">
-							<a href="" class=" btn btn-principal-animado">Entendido</a>
+							<a href="" class=" btn btn-secundario-animado">Entendido</a>
 						</div>
 					</div>
 				</div>
