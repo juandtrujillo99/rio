@@ -189,12 +189,16 @@ if($partes_ruta[0] == 'rio'){
 				break;
 
 				//recuperacion de contraseña para colaborador
-				case 'recuperar-clave-colaborador':
+				case 'recuperar-clave-admin':
 				$ruta_elegida = 'paginas/admin/recuperar-clave.php';
 				break;
-				case 'generar-url-secreta-colaborador':
-				$ruta_elegida = 'scripts/generar-url-secreta-admin.php';
+				case 'generar-url-secreta-admin':
+				$ruta_elegida = 'scripts/admin/generar-url-secreta.php';
 				break;	
+				//pagina de redireccion antes de entregar url_personal para recuperar clave
+				case 'clave-actualizada-admin':
+				$ruta_elegida = 'paginas/admin/clave-actualizada.php';
+				break;
 		}
 	}
 
@@ -291,9 +295,9 @@ if($partes_ruta[0] == 'rio'){
 
 
 
-		if ($partes_ruta[1] == 'recuperacion-clave-colaborador') {
+		if ($partes_ruta[1] == 'recuperacion-clave-admin') {
 			$url_personal = $partes_ruta[2];
-			$ruta_elegida = 'paginas/empleado/recuperacion-clave.php';
+			$ruta_elegida = 'paginas/admin/recuperacion-clave.php';
 		}
 		//edicion de datos del empleado
 		if ($partes_ruta[1] == 'editar-datos-empleado') {

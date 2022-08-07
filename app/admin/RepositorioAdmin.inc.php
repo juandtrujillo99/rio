@@ -228,7 +228,7 @@ class RepositorioAdmin{
 
 				$resultado = $sentencia -> rowCount();
 
-				if (count($resultado)) {
+				if (count(array($resultado))) {
 					$actualizacion_correcta = true;
 				}
 				else{

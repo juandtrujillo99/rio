@@ -96,7 +96,9 @@ include_once 'seccion/cabecera-cierre.inc.php';
 					</div>
 
 					<button type="submit" id="boton" class="btn btn-secundario-animado" name="login">Iniciar sesión</button>
-				</form>   		
+				</form> 
+				<br>  		
+				<a class="col-12" href="<?php echo RUTA_RECUPERAR_CLAVE_ADMIN; ?>">¿Olvidaste tu contraseña?</a>	
 	    	</div>
 	    	<div class="col-1 col-md-3"></div>	    	
 	    </div>

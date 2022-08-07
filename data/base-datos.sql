@@ -105,6 +105,18 @@ CREATE TABLE recuperacion_clave(
 
 
 
+CREATE TABLE recuperacion_clave_admin(
+	id INT NOT NULL UNIQUE AUTO_INCREMENT,
+	admin_id INT NOT NULL,
+	url_secreta VARCHAR(255) NOT NULL,
+	fecha DATETIME NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY(admin_id)
+		REFERENCES administradores(id)
+		ON UPDATE CASCADE
+		ON DELETE RESTRICT
+);
+
 
 
 CREATE TABLE comentarios (

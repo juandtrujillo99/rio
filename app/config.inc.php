@@ -34,7 +34,11 @@ include_once 'info_empresa.inc.php';
 
 	//perfil administrador y edicion de datos
 	define("RUTA_PERFIL_ADMIN", SERVIDOR."/perfil-colaborador");
+	define("RUTA_RECUPERAR_CLAVE_ADMIN", SERVIDOR."/recuperar-clave-admin");
+	define("RUTA_GENERAR_URL_SECRETA_ADMIN", SERVIDOR."/generar-url-secreta-admin");
+	define("RUTA_RECUPERACION_CLAVE_ADMIN", SERVIDOR."/recuperacion-clave-admin");
 	define("RUTA_EDITAR_DATOS_ADMINS", SERVIDOR."/generar-peticion-edicion-datos-colaborador");//script
+	define("RUTA_CLAVE_ACTUALIZADA_ADMIN", SERVIDOR."/clave-actualizada-admin");
 	define("RUTA_EDITAR_DATOS_ADMIN", SERVIDOR."/editar-datos-colaborador");//edicion de datos del administrador
 
 

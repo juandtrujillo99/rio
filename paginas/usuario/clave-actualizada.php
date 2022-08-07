@@ -22,10 +22,10 @@ include_once 'seccion/doc-navbar.inc.php';
 			</p>
 			<br><br>
 			<p class="textoBook textoParrafo">
-				Se ha modificado tu contraseña con éxito, pulsa el botón y comienza a entrenar, recuerda que no hay progreso sin esfuerzo.
+				Se ha modificado tu contraseña con éxito.
 			</p>
 			<br><br>
-			<a class="btn btn-secundario-animado" href="<?php echo RUTA_LOGIN; ?>">Iniciar sesión</a>
+			<a class="btn btn-secundario-animado" href="<?php echo RUTA_LOGIN_ADMIN; ?>">Iniciar sesión</a>
 		</div>
 	</div>
 </div>

@@ -3,7 +3,7 @@ include_once 'app/config.inc.php';
 include_once 'app/Conexion.inc.php';
 
 
-$titulo = "Email enviado";
+$titulo = "Contraseña actualizada con exito";
 
 include_once 'seccion/cabecera-inicio.inc.php';
 include_once 'seccion/cabecera-cierre.inc.php';
@@ -15,10 +15,11 @@ include_once 'seccion/doc-navbar.inc.php';
 		<div class="col-2"></div>
 		<div class="col-8">
 			<p class="textoBlack textoTitulo1">
-				Se ha enviado un email
+				¡Listo!
 			</p>
+			<br>
 			<p class="textoBookBold textoParrafo">
-				Esto podría tardar un momento
+				<?php echo $titulo; ?>
 			</p>
 			<br><br>
 			<a class="btn btn-secundario-animado" href="<?php echo RUTA_LOGIN_ADMIN; ?>">Iniciar sesión</a>

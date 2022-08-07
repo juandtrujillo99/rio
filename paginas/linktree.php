@@ -60,7 +60,7 @@ include_once 'seccion/cabecera-cierre.inc.php';
             <div class="col-1"></div>  
             <div class="col-10 row">  
 	            <div class="col-12">              
-	                <a class="btn btn-secundario-animado  modal-trigger black-text" style="background-color: #F3D3C0;width: 100%;" href="<?php echo $whatsappEmpresa;?>"><p class="textoBold" style="padding: .5em 0;" itemprop="name">Comprar por Whatsapp</p></a>
+	                <a class="btn btn-secundario-animado  modal-trigger black-text" style="background-color: #F3D3C0;width: 100%;" href="<?php echo $whatsappCatalogo;?>"><p class="textoBold" style="padding: .5em 0;" itemprop="name">Comprar por Whatsapp</p></a>
 	            </div>
 	            <div class="col-12">
 	                <br>

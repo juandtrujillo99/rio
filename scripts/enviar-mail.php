@@ -2,7 +2,7 @@
 
 $destinatario = $email;
 $asunto = "Restablece tu contraseña ".$nombreEmpresa;
-$mensaje = "Ingresa al siguiente enlace para restablecer tu contraseña: ".RUTA_RECUPERACION_CLAVE."/".$url_secreta;
+$mensaje = "Ingresa al siguiente enlace para restablecer tu contraseña: ".RUTA_RECUPERACION_CLAVE_ADMIN."/".$url_secreta;
 
 $exito = mail($destinatario, $asunto, $mensaje);
 
