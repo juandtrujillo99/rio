@@ -28,7 +28,7 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
 .minusculas{text-transform: lowercase;}
 
 .textoBlack{font-family: <?php echo $textoBlack;?>;text-transform: uppercase;}
-.textoBold{font-family: <?php echo $textoBold;?>;letter-spacing: .05em;}
+.textoBold{font-family: <?php echo $textoBold;?>;letter-spacing: .01em;}
 .textoBookBold{font-family: <?php echo $textoBookBold;?>;text-transform: uppercase;}
 .textoBook{font-family: <?php echo $textoBook;?>}
 
@@ -52,29 +52,26 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
 .enlaceSubrayado{text-decoration: underline;color: <?php echo $colorMarca;?>;}
 
 
-/*
 
-.btn-principal{ background:transparent;color: white; border-radius: 0;}
-.btn-principal:hover, .btn-principal:active{background-color: white;color: black;}
-
-*/
-
-.btn-claro{background-color: <?php echo $colorMarca?>; padding: 1em 2em;color: white;transform: skew(-15deg);}
-.btn-claro:hover{box-shadow: inset 0px 0px 0px .4em <?php echo $colorMarca4?>;background-color: <?php echo $colorMarca4?>;}
-
-.btn-oscuro{background-color: #000; padding: 1em 2em;color: white;transform: skew(-15deg);}
-.btn-oscuro:hover{box-shadow: inset 0px 0px 0px .4em <?php echo $colorMarca4?>;background-color: <?php echo $colorMarca4?>;}
+.btn-principal{box-shadow: 0px .1px 5px 0px rgba(0,0,0,0.5);line-height: 1.5em;padding: .6em 2em;font-size: .8em;color: <?php echo $colorMarca; ?>;}
+.btn-principal:hover{box-shadow: inset 0px 0px 0px 4px black;background: white;}
 
 
 
+.btn-principal-animado{
+  box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;
+  padding: .6em 2em;font-size: 1em;
+  font-family: <?php echo $textoBold;?>;
+  color: <?php echo $colorMarca2?>;
+  background-image: transparent 50%;
+  background-size: 200%;
+  background-position: 0% 50%;
+  border-radius: 0;}
 
-.btn-principal{box-shadow: inset 0px 0px 0px 4px black;line-height: 1.5em;padding: 1em 2em;}
-.btn-principal:hover{box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;}
 
-
-
-.btn-principal-invertido{box-shadow: inset 0px 0px 0px 4px #c9c9c9; color: #c9c9c9;}
-.btn-principal-invertido:hover{box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>; color: #c9c9c9;}
+.btn-principal-animado:hover, .btn-principal-animado:active{color: <?php echo $colorMarca4?>;
+  background-position: 100% 50%;transition: .4s;
+background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMarca;?> 50%, <?php echo $colorMarca;?> 100%);}
 
 
 
@@ -82,45 +79,20 @@ body::-webkit-scrollbar-thumb {background: <?php echo $colorMarca;?>;border-radi
 .btn-secundario:hover{box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;}
 
 
-
-.btn-principal-animado{
-  box-shadow: inset 0px 0px 0px 4px <?php echo $colorMarca?>;
-  padding: .5em 2em;
-  font-family: <?php echo $textoBold;?>;
-  color: <?php echo $colorMarca2?>;
-  background-image: transparent 50%;
-  background-size: 200%;
-  background-position: 0% 50%;
-  font-size: 1.2em;
-  border-radius: 0;}
-
-
-.btn-principal-animado:hover, .btn-principal-animado:active{color: <?php echo $colorMarca4?>;
-
-  background-position: 100% 50%;transition: .4s;
-
-background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMarca;?> 50%, <?php echo $colorMarca;?> 100%);}
-
-
-
-
-
 .btn-secundario-animado{
   background-color: <?php echo $colorMarca?>;
-  padding: .5em 2em;
+  padding: .4em 3em;
   font-family: <?php echo $textoBold;?>;
   color: <?php echo $colorMarca4?>;
   background-image: transparent 50%;  
   background-size: 200%;
   background-position: 0% 50%;
-  font-size: 1.2em;
+  font-size: em;
   border-radius: .5em;}
 
 
 .btn-secundario-animado:hover, .btn-principal-animado:active{color: <?php echo $colorMarca2?>;
-
   background-position: 100% 50%;transition: .4s;
-
 background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMarca4;?> 50%, <?php echo $colorMarca4;?> 100%);}
 
 
@@ -212,3 +184,6 @@ background-image: linear-gradient(to right, transparent 50%, <?php echo $colorMa
 .barra-sup .pc a{color: white;}
 .barra-sup .movil{position: absolute;z-index: 9999;font-size: 1.2em;padding: 1em 1em;width: 100%;}
 .barra-sup .movil a{background-color: rgba(255, 255, 255, 1);padding: .5em 1em;border-radius: 50%}
+
+.panel-lateral {background-color: <?php echo $colorMarca2 ;?>;color: white;}
+.panel-lateral li > a {border-bottom:.5px solid white;margin: 1.5em;font-size: .9em;color: white;}

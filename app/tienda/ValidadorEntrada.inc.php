@@ -5,7 +5,7 @@ include_once 'Validador.inc.php';
 class ValidadorEntradaTienda extends ValidadorTienda {
 	
 	public function __construct($titulo, $url, $imagen, $url_externa, $precio, $texto, $etiqueta, $conexion) {
-		$this -> aviso_inicio = "<br><div class='alert alert-danger' role='alert'>";
+		$this -> aviso_inicio = "<div class='alert alert-danger' role='alert'>";
 		$this -> aviso_cierre = "</div>";
 		
 		$this -> titulo = "";

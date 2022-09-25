@@ -147,7 +147,8 @@ include_once 'seccion/cabecera-cierre.inc.php';
     </div>
 </div>
 
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js'></script>
+<script src="<?php echo RUTA_JS; ?>imagen-zoom.js"></script>
 
 <?php
 include_once 'seccion/footer.inc.php';

@@ -81,7 +81,7 @@ include_once 'info_empresa.inc.php';
 
 
 //entradas de tienda
-	define("RUTA_ENTRADA_TIENDA", SERVIDOR."/entrada-tienda");
+	define("RUTA_ENTRADA_TIENDA", SERVIDOR."/producto");
 	define("RUTA_PANEL_ENTRADA_TIENDA", SERVIDOR."/panel-entrada-tienda");
 	define("RUTA_GESTOR_ENTRADAS_TIENDA", RUTA_PANEL_ENTRADA_TIENDA."/entradas-tienda");
 	define("RUTA_NUEVA_ENTRADA_TIENDA", SERVIDOR."/nueva-entrada-tienda");

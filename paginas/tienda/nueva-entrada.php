@@ -53,37 +53,72 @@ $imagenCompartida = RUTA_IMG_OPTIMIZADA."fondo/portada-inicio.webp";
 include_once 'seccion/cabecera-inicio.inc.php';
 ?>
 <script type='text/javascript' src="<?php echo RUTA_JS; ?>formatoDinero.js" async='async'></script>
+<link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>scroll-off.php">
 <?php
 include_once 'scripts/tienda/barra-progreso.php';//script que sube las imagenes de las entradas
+include_once 'scripts/tienda/barra-progreso-archivo-imagen.php';//script que sube las imagenes de las entradas
+include_once 'scripts/tienda/lista-categorias.php';
 include_once 'seccion/cabecera-cierre.inc.php';
-include_once 'seccion/doc-navbar.inc.php';
 ?>
-<div class="container" style="margin-bottom: 3em;">
-	<div class="row valign-wrapper">
-		<div class="col-12" style="padding: 7em 0 2em 0;">
-		    <h1 class="text-center textoBlack textoTitulo"><?php echo $titulo; ?></h1>
-		</div>
 
-		<div class="col-12 row">
-			<div class="col-1"></div>
-			<div class="col-10">
-				<form class="form-nueva-entrada" method="post" action="<?php echo RUTA_NUEVA_ENTRADA_TIENDA ?>">
-					<?php
-						if (isset($_POST['guardar'])) {
-							include_once 'seccion/tienda/form_nueva_entrada_validado.inc.php';
-						} else {						
-							include_once 'seccion/tienda/form_nueva_entrada_vacio.inc.php';
-						}
-					?>
-					<br>
-					<button type="submit" class="btn btn-secundario-animado" name="guardar">Publicar</button>
-				</form>
+<div class="container-fluid">
+	<div class="d-block d-sm-none" style="background-color: #202020;color: white;padding: .5em 1em;font-size: 1.5em;position: fixed;width: 100%;z-index: 1001;">
+		<div class="row">
+	        <div class="col-2">
+	            <a style="color: white;" href="<?php echo RUTA_GESTOR_ENTRADAS_TIENDA;?>"><i class="fa-solid fa-angle-left"></i></a>
+	        </div>
+	        <div class="col-10"><?php echo $titulo; ?></div>
+        </div>
+    </div>
+	
+	<div class="row">  
+		<div class="col-md-2">
+			<?php  include 'seccion/tienda/panel-ayuda-lateral.inc.php';?>
+		</div>
+		<div class="col-md-10 row">
+			<div class="row valign-wrapper">
+				<div class="col-12" style="padding: 3em 0 1em 0;">
+				    <p class="text-center textoBlack mayusculas d-none d-sm-block" style="font-size:2em;padding:0 2em;line-height:1.1em"><?php echo $titulo; ?></p>
+				</div>
+
+				<div class="col-12 row">
+					<div class="col-1"></div>
+					<div class="col-10">
+						<form method="post" action="<?php echo RUTA_NUEVA_ENTRADA_TIENDA ?>">
+							<?php
+								if (isset($_POST['guardar'])) {
+									include_once 'seccion/tienda/form_nueva_entrada_validado.inc.php';
+								} else {						
+									include_once 'seccion/tienda/form_nueva_entrada_vacio.inc.php';
+								}
+							?>					
+						</form>
+					</div>
+				</div>
 			</div>
+			<?php include_once 'seccion/copyright.inc.php';?>
 		</div>
 	</div>
 </div>
 
+
+
+<?php //abrir el buscador Modal ?>
+	<div id="agotadoHelp" class="modal">
+		<div class="modal-content">
+			<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+				<div class="input-field">
+					<i class="material-icons prefix">search</i>
+					<input type="text" id="autocomplete-input" placeholder="¿Te ayudo a buscar?" name="termino-buscar-tienda" required class="autocomplete">				
+					<input type="hidden" name="buscar-tienda">
+				</div>
+            </form>	
+		</div>
+	</div>
+
+
+
+<script src="<?php echo RUTA_JS; ?>formato-texto.js"></script>
 <?php
-include_once 'seccion/copyright.inc.php';
 include_once 'seccion/doc-terminacion.inc.php';
 ?>

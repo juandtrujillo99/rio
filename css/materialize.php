@@ -7133,7 +7133,7 @@ input[type=checkbox]:not(:disabled).tabbed:focus ~ .lever::before {
 /* Select Field
    ========================================================================== */
 select {
-  display: none;
+  display:none;
 }
 
 select.browser-default {
@@ -7143,8 +7143,9 @@ select.browser-default {
 select {
   background-color: rgba(255, 255, 255, 0.9);
   width: 100%;
-  padding: 5px;
-  border: 1px solid #f2f2f2;
+  padding: 0;
+  border:0;
+  border-bottom: 1px solid <?php echo $colorMarca2;?>;
   border-radius: 2px;
   height: 3rem;
 }
@@ -7185,7 +7186,7 @@ select {
 }
 
 .select-wrapper input.select-dropdown:focus {
-  border-bottom: 1px solid <?php echo $colorMarca;?>;
+  border-bottom: 1px solid <?php echo $colorMarca4;?>;
 }
 
 .select-wrapper .caret {

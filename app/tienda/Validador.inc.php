@@ -87,24 +87,8 @@ abstract class ValidadorTienda {
 	}
 
 
-
-
-	protected function validar_url_externa($conexion, $url_externa){
-
-		/*
-		if (!$this -> variable_iniciada($url_externa)) {
-			return "Inserta la url del video correctamente";
-		}
-		else{
-			$this -> url_externa = $url_externa;
-		}
-		*/
-
-		$url_externa_tratada = str_replace('"', "'", $url_externa);		
-
-		htmlspecialchars($url_externa_tratada);
-		$this -> url_externa = $url_externa_tratada;
-
+	protected function validar_url_externa($conexion, $url_externa){//cantidad
+		$this -> url_externa = $url_externa;
 	}
 
 	protected function validar_precio($conexion, $precio){
@@ -123,13 +107,17 @@ abstract class ValidadorTienda {
 		$this -> texto = $texto_tratado;
 	}
 
-	protected function validar_etiqueta($conexion, $etiqueta){
-		if (!$this -> variable_iniciada($etiqueta)) {
+	protected function validar_etiqueta($conexion, $etiqueta){		
+		if(!$this -> variable_iniciada($etiqueta)){
 			return "Debes asignarle una categoría al producto";
 		}
-		else{
+		else {
 			$this -> etiqueta = $etiqueta;
 		}
+		if (!empty($etiqueta) && strlen($etiqueta) < 1) {
+			return "Debes asignarle una categoría al producto";
+		}
+		return "";
 	}
 
 
@@ -182,6 +170,11 @@ abstract class ValidadorTienda {
 	public function mostrar_etiqueta(){
 		if ($this -> etiqueta != "") {
 			echo 'value = "' . $this -> etiqueta . '"';
+		}
+	}
+	public function mostrar_etiqueta_seleccionado(){
+		if ($this -> etiqueta !== "") {
+			echo $this -> etiqueta;
 		}
 	}
 

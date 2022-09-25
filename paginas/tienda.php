@@ -39,7 +39,7 @@ include_once 'seccion/cabecera-inicio.inc.php';
 <link async='async' rel="stylesheet" href="<?php echo RUTA_CSS; ?>sobreponer.css">
 <?php
 if(ControlSesionAdmin :: sesion_iniciada()){
-	include_once 'scripts/blog/barra-progreso-archivo-imagen.php';//script que sube las imagenes de las entradas
+	include_once 'scripts/tienda/barra-progreso-archivo-imagen.php';//script que sube las imagenes de las entradas
 }
 include_once 'seccion/cabecera-cierre.inc.php';
 include_once 'seccion/doc-navbar.inc.php';

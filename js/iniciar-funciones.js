@@ -8,7 +8,7 @@ M.AutoInit();
     $('.carousel.carousel-slider').carousel({duration:1,dist:1,noWrap:false,indicators:false,shift:0});
   	$(".button-collapse").sideNav();
   	$('.dropdown-button').dropdown();
-  	$('.modal').modal();
+  	$('.modal').modal();$('#errores').modal('open');
     $('.tabs').tabs({swipeable:true});
     $('.materialboxed').materialbox();
     $('.tooltipped').tooltip();

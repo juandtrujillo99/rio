@@ -264,7 +264,7 @@ if($partes_ruta[0] == 'rio'){
 
 
 		//rutas para entradas de la tienda
-		if ($partes_ruta[1] == 'entrada-tienda') {
+		if ($partes_ruta[1] == 'producto') {
 			$url = $partes_ruta[2];
 
 			Conexion::abrir_conexion();
