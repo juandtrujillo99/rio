@@ -43,6 +43,7 @@ if(ControlSesionAdmin :: sesion_iniciada()){
 }
 include_once 'seccion/cabecera-cierre.inc.php';
 include_once 'seccion/doc-navbar.inc.php';
+include_once 'scripts/tienda/lista-categorias.php';
 ?>
 
 
@@ -54,19 +55,74 @@ include_once 'seccion/doc-navbar.inc.php';
 		include_once 'seccion/inicio/portada.inc.php';	
 		?>	
 		<div class="row">
-			<div class="col-12 center-align" style="padding:1em 0 1.5em 0;">
-				<p class="textoSubtitulo" style="font-size: 1.5em;line-height: 1.2em;"><?php echo $descripcionAlterna;?></p>
-				<div id="descripcionAlterna" class="col-12 center-align" style="padding:2em 0 1em 0; font-size: 1em;">
-					<div class="d-none d-sm-block"><br><br></div>
-					<?php include_once 'scripts/categorias.php'; ?>
-				</div>
+			<div class="col-12 row">			
+				<div class="col-12 row">
+					
+
+			<div class="col-12 center-align d-none d-sm-block" style="padding:3em 0;">
+				<div><br><br></div>
 			</div>
-			<div class="col-12 row">
-				<div class="col-md-1"></div>				
-				<div class="col-md-10 col-12 row">
-					<?php EscritorEntradasTienda::escribir_entradas(); ?>					
+
+
+
+
+
+
+<div class="col-12 row">
+	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>" class="col-12 row">
+		<?php
+		for($i=0;$i<count($categorias);$i++){
+			?>
+		<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>" class="col-md-3 col-6" style="padding: 1em;border: 0;background-color: transparent; ">
+			<div class="row card">
+				<div class="card-image">
+					<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
 				</div>
-				<div class="col-1"></div>
+				<div class="card-content">
+					<p class="titulo textoBold mayusculas"><?php echo $categorias[$i]['nombre'];?></p>
+				</div>
+			</div>					
+		</button>
+		<input type="hidden" name="buscar-tienda">
+			<?php
+			}
+		?>
+	</form>	
+</div>	
+
+<?php /*
+<div class="d-block d-sm-none">
+	<form role="form" id="busqueda" method="post" action="<?php echo RUTA_BUSCAR_ENTRADA_TIENDA; ?>">
+		<div class="media-scroller-m snaps-inline sombra">
+			<input type="hidden" name="buscar-tienda">
+			<?php
+			for($i=0;$i<count($categorias);$i++){
+				?>
+				<div class="media-element">
+					<button name="termino-buscar-tienda" value="<?php echo $categorias[$i]['nombre'];?>">
+						<div class="img-entrada bg-cover" style="background-image:url(<?php echo RUTA_TIENDA_CATEGORIAS.$categorias[$i]["img"];?>);"></div>
+						<p><?php echo $categorias[$i]['nombre'];?></p>
+					</button>
+				</div>
+				<?php
+				}
+			?>
+		</div>	
+	</form>	
+</div>
+*/
+?>
+
+
+
+
+
+
+
+
+
+
+				</div>
 				<div class="col-12"><br><br></div>	
 			</div>
 		</div>

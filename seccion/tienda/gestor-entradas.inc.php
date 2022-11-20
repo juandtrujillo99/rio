@@ -17,10 +17,10 @@
 					<table class="table table-striped">
 						<thead>
 							<tr>
+								<th>Código</th>
 								<th>Fecha de creación</th>
 								<th>Nombre del producto</th>
 								<th>Precio</th>
-								<th></th>
 								<th></th>
 								<th></th>
 							</tr>
@@ -30,11 +30,11 @@
 							for ($i = 0; $i < count($array_entradas); $i++) {
 								$entrada_actual = $array_entradas[$i][0];
 								?>								
-								<tr>										
+								<tr>		
+									<td><?php echo $entrada_actual -> obtener_url(); ?></td>						
 									<td><?php echo convertirFecha($entrada_actual -> obtener_fecha()); ?></td>
 									<td><a target="_blank" href="<?php echo RUTA_ENTRADA_TIENDA . '/' . $entrada_actual -> obtener_url(); ?>"><?php echo $entrada_actual -> obtener_titulo(); ?></a></td>									
-									<td>$<?php echo $entrada_actual -> obtener_precio(); ?></td>	
-									<td></td>					
+									<td>$<?php echo $entrada_actual -> obtener_precio(); ?></td>					
 									<td>
 										<form method="post" action="<?php echo RUTA_EDITAR_ENTRADA_TIENDA; ?>">
 											<input type="hidden" name="id_editar" value="<?php echo $entrada_actual -> obtener_id(); ?>">
